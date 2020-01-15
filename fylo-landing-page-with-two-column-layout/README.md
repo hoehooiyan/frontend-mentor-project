@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1cba3048-1fa0-464f-b0a7-8053d5156564/deploy-status)](https://app.netlify.com/sites/adoring-goodall-513443/deploys)
+
 # Frontend Mentor - Fylo landing page with two column layout
 
 ![Design preview for the Fylo landing page with two column layout challenge](./public/assets//design/desktop-preview.jpg)
