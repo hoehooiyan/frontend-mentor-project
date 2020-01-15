@@ -1,0 +1,45 @@
+.data {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30rem auto;
+  width: 60rem;
+
+  @media screen and (max-width: $phone-big) {
+    flex-direction: column;
+    margin: 5rem auto;
+    text-align: center;
+    width: 30rem;
+  }
+
+  @media screen and (max-width: $tablet) {
+    justify-content: space-around;
+  }
+
+  &__content {
+    margin-bottom: 6rem;
+  }
+
+  &__icon {
+    width: 3rem;
+
+    @media screen and (max-width: $phone-big) {
+      justify-self: flex-start;
+    }
+  }
+
+  &__number {
+    font-size: 6rem;
+    font-weight: var(--fw-bold);
+
+    &--messages {
+      @media screen and (max-width: $phone-big) {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  &__text {
+    color: grey;
+    font-size: 1.4rem;
+  }
+}

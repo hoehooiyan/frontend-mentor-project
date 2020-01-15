@@ -1,0 +1,200 @@
+.main {
+  position: relative;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @media screen and (max-width: $phone-big) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40rem;
+
+      @media screen and (max-width: $tablet-big) {
+        margin-bottom: 15rem;
+      }
+    }
+
+    &:not(.main__content--second) {
+      background-color: var(--pale-blue);
+    }
+
+    &--first {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../images/bg-section-top-desktop-1.svg');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 100% 40%;
+        height: 50rem;
+        top: -18rem;
+        width: 100%;
+        z-index: -1000;
+
+        @media screen and (max-width: $tablet-big) {
+          top: -15rem;
+          height: 55rem;
+        }
+
+        @media screen and (max-width: $phone-big) {
+          background-image: url('../images/bg-section-top-mobile-1.svg');
+          background-size: 100% 30%;
+          top: -13rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../images/bg-section-bottom-desktop-1.svg');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: 120% 40%;
+        height: 50rem;
+        bottom: 135rem;
+        width: 100%;
+        z-index: -1000;
+
+        @media screen and (max-width: $tablet-big) {
+          bottom: 80rem;
+          height: 65rem;
+        }
+
+        @media screen and (max-width: $tablet) {
+          bottom: 100rem;
+        }
+
+        @media screen and (max-width: $phone-big) {
+          background-image: url('../images/bg-section-bottom-mobile-1.svg');
+          bottom: 132rem;
+        }
+      }
+    }
+
+    &--third {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../images/bg-section-top-desktop-2.svg');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 100% 40%;
+        height: 50rem;
+        top: 138rem;
+        left: 0;
+        width: 100%;
+        z-index: -1000;
+
+        @media screen and (max-width: $tablet-big) {
+          top: 85rem;
+        }
+
+        @media screen and (max-width: $tablet) {
+          background-size: 160% 30%;
+          top: 108rem;
+        }
+
+        @media screen and (max-width: $phone-big) {
+          background-image: url('../images/bg-section-top-mobile-2.svg');
+          top: 140rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../images/bg-section-bottom-desktop-2.svg');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: 120% 40%;
+        height: 50rem;
+        bottom: -20rem;
+        width: 100%;
+        z-index: -1000;
+
+        @media screen and (max-width: $tablet-big) {
+          bottom: -15rem;
+        }
+
+        @media screen and (max-width: $tablet) {
+          background-size: 180% 40%;
+        }
+
+        @media screen and (max-width: $phone-big) {
+          background-image: url('../images/bg-section-bottom-mobile-2.svg');
+          background-size: 100% 30%;
+          bottom: -13rem;
+        }
+      }
+    }
+  }
+
+  &__svg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__description {
+    width: 50rem;
+
+    @media screen and (max-width: $tablet-big) {
+      padding: 10rem;
+    }
+
+    @media screen and (max-width: $phone-big) {
+      padding: 0;
+      text-align: center;
+      width: 32rem;
+    }
+
+    &--first {
+      @media screen and (max-width: $phone-big) {
+        order: 2;
+      }
+    }
+
+    &--second {
+      order: 2;
+    }
+
+    &--third {
+      @media screen and (max-width: $phone-big) {
+        order: 2;
+      }
+    }
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+  }
+
+  &__img {
+    width: 50rem;
+
+    @media screen and (max-width: $tablet-big) {
+      padding-right: 10rem;
+      width: 40rem;
+    }
+
+    @media screen and (max-width: $phone-big) {
+      margin: 8rem 0;
+      padding: 2rem;
+      width: 35rem;
+    }
+
+    &--second {
+      @media screen and (max-width: $tablet-big) {
+        padding-right: 0rem;
+        padding-left: 10rem;
+      }
+
+      @media screen and (max-width: $phone-big) {
+        padding-left: 0;
+      }
+    }
+  }
+}

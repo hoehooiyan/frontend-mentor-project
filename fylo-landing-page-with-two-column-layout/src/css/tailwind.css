@@ -1,0 +1,40 @@
+:root {
+  --primary-dark-blue: hsl(243, 87%, 12%);
+  --primary-desaturated-blue: hsl(238, 22%, 44%);
+  --secondary-bright-blue: hsl(224, 93%, 58%);
+  --secondary-moderate-cyan: hsl(170, 45%, 43%);
+  --neutral-grayish-blue: hsl(240, 75%, 98%);
+  --neutral-gray: hsl(0, 0%, 75%);
+}
+
+@tailwind base;
+
+@tailwind components;
+
+.btn {
+  @apply font-display font-bold text-neutral-blue bg-secondary-bright-blue rounded shadow-md py-3 px-6;
+}
+
+.feature-section {
+  @apply h-full bg-cover bg-no-repeat bg-top;
+  background-image: url('./assets/images/bg-curve-mobile.svg');
+}
+
+@screen lg {
+  .feature-section {
+    background-image: url('./assets/images/bg-curve-desktop.svg');
+  }
+}
+
+.cta {
+  @apply flex justify-between items-center h-10 text-secondary-moderate-cyan mx-auto w-1/2 p-2;
+  border-bottom: 1px solid;
+}
+
+@screen sm {
+  .cta {
+    @apply w-48;
+  }
+}
+
+@tailwind utilities;

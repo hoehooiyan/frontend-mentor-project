@@ -1,0 +1,19 @@
+{
+  "name": "fylo-landing-page-with-two-column-layout-tailwindcss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hoehooiyan/fylo-landing-page-with-two-column-layout-tailwindcss.git",
+  "author": "hoehooiyan <hoehooiyan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "postcss src/css/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss src/css/tailwind.css -o public/build/tailwind.css --watch",
+    "start": "live-server public"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.3",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^6.1.3",
+    "tailwindcss": "^1.1.4"
+  }
+}

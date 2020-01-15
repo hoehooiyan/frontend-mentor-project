@@ -1,0 +1,39 @@
+.main {
+
+  padding: 4rem 0 0 0;
+
+  &__container {
+    border-radius: 1rem;
+    box-shadow: $box-shadow-medium;
+    margin: 0 2rem;
+    padding: 4rem 3rem;
+    text-align: center;
+
+    @include tabletPort {
+      margin: 4rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin: 5rem 0 2rem 0;
+  }
+
+  &__description {
+    color: $grayish-blue;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  &__img {
+    width: 25rem;
+
+    @include tabletPort {
+      width: 40rem;
+    }
+  }
+}

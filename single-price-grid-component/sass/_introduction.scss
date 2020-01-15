@@ -1,0 +1,33 @@
+.introduction {
+  background-color: #fff;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 4rem var(--global-px);
+
+  @include lg {
+    padding: 3rem 10rem 3rem 3rem;
+  }
+
+  @include xxl {
+    padding: 4rem 10rem 4rem 4rem;
+  }
+
+  &__title {
+    color: var(--primary-cyan);
+    font-size: var(--xl-text);
+    font-weight: var(--bold);
+    margin-bottom: 2rem;
+  }
+
+  &__subtitle {
+    color: var(--primary-yellow);
+    font-size: var(--m-text);
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    color: var(--grayish-blue);
+    font-size: var(--s-text);
+    line-height: 1.5;
+  }
+}

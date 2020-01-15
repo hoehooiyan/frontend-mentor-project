@@ -1,0 +1,71 @@
+.hero {
+
+  background-color: $pale-cyan;
+  background-image: url('../images/bg-hero-mobile.svg');
+  padding-bottom: 3rem;
+
+  @include tabletPort {
+    padding-bottom: 8rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem 0 2rem;
+
+    @include tabletPort {
+      padding: 5rem 3rem 0 3rem;
+    }
+
+    &--logo {
+      width: 110px;
+
+      @include tabletPort {
+        width: 200px;
+      }
+    }
+  }
+
+  &__section {
+    color: $dark-cyan;
+    padding: 6rem 3rem;
+    text-align: center;
+
+    @include tabletPort {
+      padding: 8rem 4rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+
+    @include tabletPort {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+      margin-left: 8rem;
+      margin-right: 8rem;
+    }
+  }
+
+  &__description {
+    line-height: 1.5;
+    margin-bottom: 3rem;
+
+    @include tabletPort {
+      margin-bottom: 4rem;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 30rem;
+
+    @include tabletPort {
+      width: 50rem;
+    }
+  }
+}

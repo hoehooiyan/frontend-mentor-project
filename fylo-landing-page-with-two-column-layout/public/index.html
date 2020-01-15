@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./build/tailwind.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="font-body">
+
+  <header id="header" class="flex mt-8 mx-6 justify-between items-center sm:mt-12 sm:mx-10  lg:mx-12 2xl:mx-16">
+    <img src="./assets/images/logo-header.svg" alt="header-logo" class="header-logo w-20 md:w-32 2xl:w-40">
+    <nav id="nav-bar"
+      class="font-display text-sm flex w-1/2 justify-between text-primary-dark-blue md:justify-around md:text-lg lg:w-64 lg:justify-between 2xl:text-xl">
+      <a href="#">Features</a>
+      <a href="#">Team</a>
+      <a href="#">Sign In</a>
+    </nav>
+  </header>
+
+  <section id="hero-section"
+    class="mx-10 sm:mx-16 lg:flex lg:mt-32 lg:items-end lg:justify-between lg:mx-12 xl:items-center 2xl:mx-16">
+    <img src="./assets/images/illustration-1.svg" alt="illustration-1"
+      class="hero-img mt-20 mb-10 sm:mt-24 sm:mb-16 lg:order-2 lg:m-0 lg:w-1/2">
+
+    <div class="hero-intro text-center text-primary-dark-blue lg:text-left lg:mr-10">
+      <div class="hero-text">
+        <h2 class="font-bold text-xl mb-8 sm:text-2xl md:text-3xl xl:text-4xl">
+          All your files in one secure location, accessible anywhere.
+        </h2>
+        <p class="text-sm mb-8 sm:text-base md:text-lg xl:text-xl">
+          Fylo stores your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends,
+          family, and co-workers.
+        </p>
+      </div>
+
+      <form id="hero-form" class="flex flex-col mx-10 md:mx-20 lg:flex-row lg:mx-0 lg:items-center">
+        <input type="text" name="email" id="second-email" placeholder="Enter your email..."
+          class="email border border-primary-dark-blue rounded py-3 px-6 mb-4 placeholder-neutral-gray text-sm outline-none shadow sm:mb-6 lg:mr-4 lg:mb-0 xl:w-64">
+        <button class="btn xl:px-12">Get Started</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="feature-section"
+    class="feature-section mt-48 mb-20 mx-6 bg-cover bg-no-repeat sm:mx-16 lg:mt-64 lg:mx-12 lg:flex lg:justify-between lg:items-center xl:items-end 2xl:mx-16">
+    <img src="./assets/images/illustration-2.svg" alt="illustration-2" class="mb-20 lg:order-2 lg:w-1/2">
+
+    <div class="feature-detail lg:mr-12 xl:w-full">
+      <div class="feature-text text-center lg:text-left">
+        <h2
+          class="font-display font-bold text-lg text-center mb-6 text-primary-dark-blue sm:text-2xl md:text-3xl lg:text-left xl:text-4xl">
+          Stay productive, wherever you are
+        </h2>
+        <p class="text-gray-700 text-sm text-left sm:text-base md:text-lg xl:text-xl">
+          Never let location be an issue when accessing your files.
+          Fylo has you covered for all of your file storage needs.
+        </p>
+        <br>
+        <p class="text-gray-700 text-sm mb-8 text-left sm:text-base md:text-lg xl:text-xl">
+          Securely share files and folders with friends, family and colleagues for
+          live collaboration. No email attachments required!
+        </p>
+        <div class="cta lg:justify-start lg:mx-0">
+          <button class="text-secondary-moderate-cyan text-sm sm:text-base">
+            See how Fylo works
+          </button>
+          <img src="./assets/images/icon-arrow.svg" alt="icon-arrow">
+        </div>
+      </div>
+
+      <div id="testimonial" class="rounded-lg shadow-xl p-6 m-6 lg:mx-0 2xl:w-3/5">
+        <div class="testimonial-text">
+          <img src="./assets/images/icon-quotes.svg" alt="icon-quotes" class="mb-4">
+          <p class="text-xs text-primary-dark-blue font-medium mb-4 sm:text-sm md:text-base">
+            Fylo has improved our team productivity by an order of magnitude. Since
+            making the switch our team has become a well-oiled collaboration machine.
+          </p>
+        </div>
+
+        <div class="person-card flex items-center">
+          <img src="./assets/images/avatar-testimonial.jpg" alt="avatar-testimonial"
+            class="rounded-full w-8 mr-4 md:w-12 2xl:w-10">
+
+          <div class="person-detail">
+            <p class="font-bold text-sm">Kyle Burton</p>
+            <p class="text-xs">Founder & CEO, Huddle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup-section"
+    class="bg-primary-light-blue py-12 px-6 sm:px-16 md:px-20 lg:flex lg:px-12 lg:items-center xl:justify-between 2xl:px-16 2xl:py-16">
+    <div class="signup-text text-center lg:text-left lg:w-full lg:mr-24">
+      <h3 class="text-neutral-blue font-bold mb-6 sm:text-lg sm:mb-10 md:text-xl lg:mb-4 2xl:text-2xl">
+        Get early access today
+      </h3>
+      <p class="text-neutral-gray mb-6 sm:mb-10 lg:mb-0">
+        It only takes a minute to sign up and our free starter tier is extremely generous.
+        If you have any questions, our support team would be happy to help you.
+      </p>
+    </div>
+
+    <form id="signup-form" class="flex flex-col px-8 md:px-20 lg:px-0 lg:items-start lg:w-full">
+      <input type="text" name="email" id="first-email" placeholder="email@example.com"
+        class="rounded py-3 px-4 mb-4 placeholder-neutral-gray sm:mb-6 lg:mb-4 lg:w-64 lg:w-full">
+      <button class="btn text-sm lg:px-6 lg:text-xs">Get Started For Free</button>
+    </form>
+  </section>
+
+  <footer id="footer"
+    class="bg-primary-dark-blue text-neutral-blue pt-16 pb-12 px-12 sm:px-16 sm:pb-4 lg:px-12 lg:flex lg:justify-between lg:pb-0 2xl:px-16">
+    <div class="footer-1 mb-16">
+      <img src="./assets/images/logo-footer.svg" alt="footer-logo" class="footer-logo mb-10">
+
+      <div class="contact">
+        <div class="phone flex mb-4 sm:mb-8 lg:items-center">
+          <img src="./assets/images/icon-phone.svg" alt="phone-icon" class="mr-4">
+          <p>Phone: +1-543-123-4567</p>
+        </div>
+        <div class="email flex lg:items-center">
+          <img src="./assets/images/icon-email.svg" alt="email-icon" class="mr-4">
+          <p>example@fylo.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-2 flex flex-col justify-between h-40 mb-16">
+      <a href="#">About Us</a>
+      <a href="#">Jobs</a>
+      <a href="#">Press</a>
+      <a href="#">Blog</a>
+    </div>
+
+    <div class="footer-3 flex flex-col justify-around h-32 mb-16 sm:justify-between">
+      <a href="#">Contact Us</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </div>
+
+    <div
+      class="social-media flex justify-around mx-24 sm:w-40 sm:mx-auto lg:mx-0 lg:flex-col lg:justify-between lg:h-32 lg:w-32">
+      <ion-icon name="logo-facebook" class="border rounded-full p-2"></ion-icon>
+      <ion-icon name="logo-twitter" class="border rounded-full p-2"></ion-icon>
+      <ion-icon name="logo-instagram" class="border rounded-full p-2"></ion-icon>
+    </div>
+  </footer>
+
+  <section id="copyright" class="bg-primary-dark-blue pb-4">
+    <p class="attribution text-neutral-gray">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/hoehooiyan/fylo-landing-page-with-two-column-layout-tailwindcss"
+        target="_blank">Hoe Hooi Yan</a>.
+    </p>
+  </section>
+
+  <!-- Ionicons CDN -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+
+</html>

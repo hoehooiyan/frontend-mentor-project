@@ -1,0 +1,74 @@
+.footer {
+  background-color: $dark-cyan;
+  color: #fff;
+  padding: 15rem 1.5rem 0 1.5rem;
+
+  &__logo {
+    margin-bottom: 3rem;
+    width: 20rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 2rem;
+  }
+
+  &__location {
+    align-items: flex-start;
+    margin-bottom: 2rem;
+
+    &--icon {
+      margin-right: 2.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 2rem;
+  }
+
+  &__email {
+    margin-bottom: 6.5rem;
+  }
+
+  &__directory {
+    font-size: 2rem;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+
+  &__social-circle {
+    border: 1px solid #fff;
+    border-radius: 50rem;
+    height: 38px;
+    text-align: center;
+    width: 38px;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    i {
+      padding: 1rem;
+    }
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+    padding: 3rem 0 5rem 0;
+    text-align: center;
+  }
+}

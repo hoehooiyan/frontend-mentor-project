@@ -1,0 +1,26 @@
+.btn {
+  cursor: pointer;
+
+  &__header {
+    background-color: #fff;
+    border: none;
+    border-radius: 25rem;
+    box-shadow: $box-shadow-medium;
+    color: $dark-cyan;
+    font-family: $font-body;
+    font-weight: 700;
+    padding: 0.5rem 2.5rem;
+
+    @include tabletPort {
+      padding: 1rem 4rem;
+    }
+  }
+
+  &__hero-cta {
+    @include btn;
+  }
+
+  &__main-cta {
+    @include btn;
+  }
+}

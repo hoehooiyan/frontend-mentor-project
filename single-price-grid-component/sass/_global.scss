@@ -1,0 +1,60 @@
+:root {
+  // Color
+  --primary-cyan: hsl(179, 62%, 43%);
+  --primary-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+  // Font family
+  --primary-font: 'Karla', sans-serif;
+
+  // Font size
+  --xl-text: 2rem;
+  --l-text: 1.8rem;
+  --m-text: 1.5rem;
+  --s-text: 1.4rem;
+
+  // Font weight
+  --bold: 700;
+
+  // Padding left & right
+  --global-px: 2.5rem;
+}
+
+// SASS variables
+// Color
+$cyan: hsl(179, 62%, 43%);
+
+// Breakpoint
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+$screen-xxl: 1440px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-gray);
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 375px;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--primary-font);
+}

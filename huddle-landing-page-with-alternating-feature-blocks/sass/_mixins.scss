@@ -1,0 +1,50 @@
+@mixin btn {
+  background-color: $primary-pink;
+  border: none;
+  border-radius: 25rem;
+  color: #fff;
+  font-weight: 700;
+  padding: 1.5rem 6rem;
+}
+
+@mixin mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tabletPort {
+  @media (min-width: $tabletPort) {
+    @content;
+  }
+}
+
+@mixin tabletLand {
+  @media (min-width: $tabletLand) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin laptopL {
+  @media (min-width: $laptopL) {
+    @content;
+  }
+}
+
+@mixin laptopXL {
+  @media (min-width: $laptopXL) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}

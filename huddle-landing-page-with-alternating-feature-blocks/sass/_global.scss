@@ -1,0 +1,49 @@
+// Colors
+$primary-pink: hsl(322, 100%, 66%);
+$pale-cyan: hsl(193, 100%, 96%);
+$dark-cyan: hsl(192, 100%, 9%);
+$grayish-blue: hsl(209, 11%, 55%);
+
+// Typography
+$font-heading: 'Poppins',
+sans-serif;
+$font-body: 'Open Sans',
+sans-serif;
+
+// Box shadow
+$box-shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Responsive devices
+$mobile: 375px;
+$tabletPort: 768px;
+$tabletLand: 1024px;
+$laptop: 1280px;
+$laptopL: 1440px;
+$laptopXL: 1920px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-body;
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+}

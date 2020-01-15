@@ -1,0 +1,16 @@
+@tailwind base;
+
+@tailwind components;
+
+.body-bg {
+   /* @apply bg-purple-700 m-8 text-white h-screen bg-no-repeat bg-top bg-contain; */
+   background-image: url('./assets/images/bg-mobile.svg');
+}
+
+@screen xl {
+  .body-bg {
+    background-image: url('../assets/images/bg-desktop.svg');
+  }
+}
+
+@tailwind utilities;

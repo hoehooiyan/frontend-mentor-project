@@ -1,0 +1,7 @@
+.details {
+  @include lg {
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+  }
+}

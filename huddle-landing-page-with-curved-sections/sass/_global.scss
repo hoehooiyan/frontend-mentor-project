@@ -1,0 +1,46 @@
+:root {
+  // Color
+  --pink: hsl(322, 100%, 66%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --pale-blue: hsl(207, 100%, 98%);
+  --purple: hsl(228, 45%, 44%);
+
+  // Font
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  // Font size
+  --fs-heading-big: 4rem;
+
+  // Font weight
+  --fw-normal: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+
+  // Margin
+  // --global-margin: 6rem;
+}
+
+// SASS variables
+$tablet-big: 1024px;
+$tablet: 768px;
+$phone-big: 414px;
+$phone: 375px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+}

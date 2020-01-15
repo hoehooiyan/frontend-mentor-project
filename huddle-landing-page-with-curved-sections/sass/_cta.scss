@@ -1,0 +1,21 @@
+.cta {
+  font-family: var(--font-heading);
+  margin: 30rem auto 34rem auto;
+  text-align: center;
+
+  @media screen and (max-width: $tablet-big) {
+    margin: 25rem auto 30rem auto;
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin: 20rem auto;
+  }
+
+  @media screen and (max-width: $phone-big) {
+    margin: 20rem 3rem 25rem 3rem;
+  }
+
+  &__title {
+    margin: 0 0 3rem 0;
+  }
+}

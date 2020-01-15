@@ -1,0 +1,54 @@
+.header {
+  padding: 0 2rem;
+  text-align: center;
+
+  @include sm {
+    padding: 0 4rem;
+  }
+
+  @include md {
+    padding: 0 8rem;
+  }
+
+  @include lg {
+    padding: 0 20rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: var(--small);
+
+    @include md {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    color: var(--dark-blue);
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+    margin-bottom: 2rem;
+
+    @include md {
+      font-size: 3rem;
+    }
+  }
+
+  &__detail {
+    color: var(--grayish-blue);
+    margin-bottom: 5rem;
+    padding: 0 2rem;
+
+    @include md {
+      padding: 0 4rem;
+    }
+
+    @include lg {
+      padding: 0 6rem;
+    }
+
+    @include xl {
+      padding: 0 25rem;
+    }
+  }
+}

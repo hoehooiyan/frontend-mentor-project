@@ -1,0 +1,56 @@
+.subscription {
+  background-color: var(--primary-cyan);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem var(--global-px);
+
+  @include lg {
+    border-bottom-left-radius: 0.5rem;
+    padding: 3rem;
+    width: 50%;
+  }
+
+  @include xxl {
+    padding: 4rem;
+  }
+
+  &__title {
+    font-size: var(--l-text);
+    margin-bottom: 2rem;
+  }
+
+  &__price {
+    color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &--amount {
+      color: #fff;
+      font-size: 4rem;
+      font-weight: var(--bold);
+      margin-right: 1rem;
+    }
+  }
+
+  &__details {
+    font-size: var(--m-text);
+    margin-bottom: 3rem;
+  }
+
+  &__cta {
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: var(--primary-yellow);
+    font-size: var(--l-text);
+    font-weight: var(--bold);
+    padding: 1.5rem 4rem;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}

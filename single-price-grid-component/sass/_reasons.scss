@@ -1,0 +1,28 @@
+.reasons {
+  background-color: lighten($cyan, 4%);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: #fff;
+  padding: 3rem var(--global-px);
+
+  @include lg {
+    border-bottom-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem var(--global-px) 3rem 3rem;
+    width: 50%;
+  }
+
+  @include xxl {
+    padding: 4rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    color: var(--light-gray);
+    list-style-type: none;
+  }
+}
