@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c4ca7945-0d85-40d3-bcba-adfc2893700b/deploy-status)](https://app.netlify.com/sites/frontendmentor-huddle-landing-page-single-introductory-section/deploys)
+
 # Frontend Mentor - Huddle landing page with single introductory section
 
 ![Design preview for the Huddle landing page with single introductory section](./dist/assets//design/desktop-preview.jpg)
