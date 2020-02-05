@@ -10,7 +10,9 @@
   height: 15rem;
   margin: 8rem auto;
   padding: 0 6rem;
+  position: relative;
   width: 100%;
+  z-index: 10;
 
   display: flex;
   align-items: center;

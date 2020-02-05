@@ -3,6 +3,7 @@
 .hero {
   display: flex;
   align-items: center;
+  padding: $global-top-bottom-p $global-left-right-p;
   width: 100%;
 
   .heroDescription {

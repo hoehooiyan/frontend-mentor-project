@@ -1,0 +1,26 @@
+@import '../../app/App.styles.scss';
+
+.features {
+  background-color: $light-gray;
+  margin: 0 auto;
+  padding: 15rem $global-left-right-p;
+  text-align: center;
+  position: relative;
+  top: -15rem;
+
+  .title {
+    color: $dark-violet;
+    margin: 0 auto;
+    width: 52rem;
+  }
+
+  .text {
+    color: $grayish-violet;
+    margin: 0 auto;
+    width: 52rem;
+  }
+
+  .cards {
+    display: flex;
+  }
+}

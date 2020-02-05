@@ -5,6 +5,7 @@ import './App.styles.scss';
 import Header from '../components/header/header.component';
 import Hero from '../components/hero/hero.component';
 import Main from '../components/main/main.component';
+import Features from '../components/features/features.component';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Header />
       <Hero />
       <Main />
+      <Features />
     </div>
   );
 }

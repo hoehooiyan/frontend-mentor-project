@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 8rem;
+  padding: $global-top-bottom-p $global-left-right-p;
   width: 100%;
 
   .panel {
