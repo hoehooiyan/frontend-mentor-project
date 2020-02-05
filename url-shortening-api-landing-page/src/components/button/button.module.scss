@@ -1,7 +1,10 @@
 @import '../../app/App.styles.scss';
 
 .button {
+  transition: all 0.3s;
+
   &:hover {
-  opacity: 0.6;
+    background-color: $gray;
+    opacity: 0.6;
   }
 }
