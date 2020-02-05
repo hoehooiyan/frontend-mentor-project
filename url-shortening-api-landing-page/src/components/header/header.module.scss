@@ -1,0 +1,33 @@
+@import '../../app/App.styles.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+  width: 100%;
+
+  .panel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 35%;
+  }
+
+  .navbar {
+    a {
+      color: $grayish-violet;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.5s;
+
+      &:hover {
+        color: $dark-violet;
+      }
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+  }
+}

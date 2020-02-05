@@ -1,0 +1,28 @@
+@import '../../app/App.styles.scss';
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .heroDescription {
+    width: 60%;
+  }
+
+  .heroTitle {
+    color: $dark-violet;
+    font-size: 6.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .heroText {
+    color: $grayish-violet;
+    margin-bottom: 2rem;
+  }
+
+  .heroImg {
+    position: relative;
+    right: -22rem;
+  }
+}
