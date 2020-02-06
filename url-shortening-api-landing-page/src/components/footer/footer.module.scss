@@ -1,0 +1,17 @@
+@import '../../app/App.styles.scss';
+
+.footer {
+  background-color: $dark-violet;
+  padding: 6rem $global-left-right-p;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+  }
+}
