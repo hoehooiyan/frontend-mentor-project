@@ -1,1 +1,41 @@
 @import '../../app/App.styles.scss';
+
+.card {
+  // display: flex;
+  // flex-direction: column;
+
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 0 4rem;
+  text-align: left;
+  height: 25rem;
+  width: 60%;
+
+  .imgWrapper {
+    display: flex;
+    background-color: $primary-violet;
+    border-radius: 100%;
+    text-align: center;
+    height: 7rem;
+    width: 7rem;
+    position: relative;
+    top: -3rem;
+
+    .img {
+      margin: auto;
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+  }
+
+  .title {
+    color: $dark-violet;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .text {
+    color: $grayish-violet;
+    font-size: 1.5rem;
+  }
+}

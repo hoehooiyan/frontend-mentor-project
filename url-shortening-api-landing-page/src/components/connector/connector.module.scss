@@ -1,0 +1,10 @@
+@import '../../app/App.styles.scss';
+
+.line {
+  border-bottom: 8px solid $primary-cyan;
+  margin-top: 14rem;
+  width: 8rem;
+  transform: rotate(180deg);
+  position: relative;
+  z-index: -100;
+}
