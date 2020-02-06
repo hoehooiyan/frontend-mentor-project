@@ -6,6 +6,7 @@ import Header from '../components/header/header.component';
 import Hero from '../components/hero/hero.component';
 import Main from '../components/main/main.component';
 import Features from '../components/features/features.component';
+import Cta from '../components/cta/cta.component';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Hero />
       <Main />
       <Features />
+      <Cta />
     </div>
   );
 }

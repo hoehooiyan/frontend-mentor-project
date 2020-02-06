@@ -1,0 +1,19 @@
+@import '../../app/App.styles.scss';
+
+.cta {
+  background-color: $primary-violet;
+  background-image: url('../../images/bg-boost-desktop.svg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+  margin: $feature-margin-top auto 0 auto;
+  padding: 5rem 0;
+  text-align: center;
+  width: 100%;
+
+  .title {
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+}

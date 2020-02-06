@@ -3,10 +3,10 @@
 .features {
   background-color: $light-gray;
   margin: 0 auto;
-  padding: 15rem $global-left-right-p;
+  padding: 15rem $global-left-right-p 10rem;
   text-align: center;
   position: relative;
-  top: -15rem;
+  top: $feature-margin-top;
   width: 100%;
   z-index: 100;
 
