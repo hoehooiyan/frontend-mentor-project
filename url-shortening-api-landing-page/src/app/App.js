@@ -11,7 +11,7 @@ import Footer from '../components/footer/footer.component';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
       <Hero />
       <Main />
@@ -20,6 +20,6 @@ const App = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

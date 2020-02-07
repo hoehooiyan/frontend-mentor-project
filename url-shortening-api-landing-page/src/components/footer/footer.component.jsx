@@ -34,7 +34,7 @@ const Footer = () => {
         <SocialMedia />
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

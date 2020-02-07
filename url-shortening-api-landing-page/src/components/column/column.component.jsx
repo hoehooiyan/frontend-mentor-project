@@ -13,7 +13,7 @@ const Column = ({ title, itemOne, itemTwo, itemThree, itemFour }) => {
         <li>{itemFour ? `${itemFour}` : null}</li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Column;

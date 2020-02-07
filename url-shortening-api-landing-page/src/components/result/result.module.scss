@@ -1,0 +1,39 @@
+@import '../../app/App.styles.scss';
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem 4rem;
+  margin: 0 auto 2rem auto;
+  width: 100%;
+  position: relative;
+  top: -4rem;
+
+  .originalLink {
+    color: $dark-violet;
+    font-size: 2rem;
+    width: 60%;
+    word-wrap: break-word;
+  }
+
+  .shortenLink {
+    color: $primary-cyan;
+    font-size: 2rem;
+
+    &:hover {
+      color: darken($color: $primary-cyan, $amount: 5%);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .newLinkWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+  }
+}

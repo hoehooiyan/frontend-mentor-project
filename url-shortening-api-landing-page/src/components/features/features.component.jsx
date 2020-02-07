@@ -14,7 +14,8 @@ const Features = () => {
     <section className={featuresStyles.features}>
       <h2 className={featuresStyles.title}>Advanced Statistics</h2>
       <p className={featuresStyles.text}>
-        Track how your links are performing across the web with our advanced statistics dashboard.
+        Track how your links are performing across the web with our advanced
+        statistics dashboard.
       </p>
       <div className={featuresStyles.cards}>
         <Card
@@ -39,7 +40,7 @@ const Features = () => {
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Features;
