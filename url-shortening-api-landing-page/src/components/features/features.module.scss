@@ -13,17 +13,31 @@
       calc(#{$global-left-right-p} - 4rem);
   }
 
+  @include m-tablet {
+    padding: 0 calc(#{$global-left-right-p} - 6rem) 30rem
+    calc(#{$global-left-right-p} - 6rem);
+  }
+
   .title {
     color: $dark-violet;
     font-size: 3rem;
     margin: 0 auto;
     width: 52rem;
+
+    @include m-tablet {
+      font-size: 2.5rem;
+    }
   }
 
   .text {
     color: $grayish-violet;
     margin: 0 auto;
     width: 52rem;
+
+    @include m-tablet {
+      font-size: 1.6rem;
+      width: 45rem;
+    }
   }
 
   .cards {

@@ -15,6 +15,10 @@
     padding: 0 calc(#{$global-left-right-p} - 4rem) $global-top-bottom-p;
   }
 
+  @include m-tablet {
+    padding: 0 calc(#{$global-left-right-p} - 6rem) $global-top-bottom-p;
+  }
+
   .heroDescription {
     width: 60%;
   }
@@ -32,6 +36,10 @@
     @include s-desktop {
       font-size: 4rem;
     }
+
+    @include m-tablet {
+      font-size: 3rem;
+    }
   }
 
   .heroText {
@@ -40,6 +48,10 @@
 
     @include s-desktop {
       font-size: 1.6rem;
+    }
+
+    @include m-tablet {
+      font-size: 1.4rem;
     }
   }
 
@@ -58,6 +70,11 @@
     @include l-tablet {
       width: 55rem;
       right: -15rem;
+    }
+
+    @include m-tablet {
+      width: 40rem;
+      right: -10rem;
     }
   }
 }

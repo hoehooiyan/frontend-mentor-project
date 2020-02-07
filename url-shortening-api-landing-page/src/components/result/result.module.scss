@@ -12,6 +12,10 @@
   position: relative;
   top: -4rem;
 
+  @include m-tablet {
+    padding: 1rem 3rem;
+  }
+
   .originalLink {
     color: $dark-violet;
     width: 60%;
@@ -21,6 +25,10 @@
       font-size: 1.5rem;
       width: 50%;
     }
+
+    @include m-tablet {
+      font-size: 1.3rem;
+    }
   }
 
   .shortenLink {
@@ -28,6 +36,10 @@
 
     @include l-tablet {
       font-size: 1.5rem;
+    }
+
+    @include m-tablet {
+      font-size: 1.3rem;
     }
 
     &:hover {
@@ -45,6 +57,10 @@
 
     @include l-tablet {
       width: 35%;
+    }
+
+    @include m-tablet {
+      width: 40%;
     }
   }
 }

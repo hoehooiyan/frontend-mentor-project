@@ -12,6 +12,10 @@
     font-size: 1.5rem;
     list-style-type: none;
 
+    @include m-tablet {
+      font-size: 1.3rem;
+    }
+
     li {
       transition: all 0.3s;
 

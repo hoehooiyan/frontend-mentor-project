@@ -15,6 +15,11 @@
     padding: $global-top-bottom-p calc(#{$global-left-right-p} - 4rem);
   }
 
+  @include m-tablet {
+    padding: $global-top-bottom-p calc(#{$global-left-right-p} - 6rem);
+    margin-bottom: 2rem;
+  }
+
   .panel {
     display: flex;
     align-items: flex-start;
@@ -23,6 +28,10 @@
 
     .img {
       margin-right: 5rem;
+
+      @include m-tablet {
+        width: 10rem;
+      }
     }
   }
 

@@ -13,6 +13,10 @@
     padding: 0 calc(#{$global-left-right-p} - 4rem);
   }
 
+  @include m-tablet {
+    padding: 0 calc(#{$global-left-right-p} - 6rem);
+  }
+
   .form {
     background-color: $primary-violet;
     background-image: url('../../images/bg-shorten-desktop.svg');
@@ -31,6 +35,11 @@
     align-items: center;
     justify-content: space-evenly;
 
+    @include m-tablet {
+      height: 10rem;
+      padding: 0 2rem;
+    }
+
     .input {
       border: none;
       border-radius: 0.5rem;
@@ -40,6 +49,10 @@
       outline: none;
       padding: 1rem 2rem;
       width: 80%;
+
+      @include m-tablet {
+        width: 70%;
+      }
 
       &::placeholder {
         color: $gray;

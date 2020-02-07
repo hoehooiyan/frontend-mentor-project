@@ -13,6 +13,16 @@
     padding: 6rem calc(#{$global-left-right-p} - 4rem);
   }
 
+  @include m-tablet {
+    padding: 6rem calc(#{$global-left-right-p} - 6rem);
+  }
+
+  .img {
+    @include m-tablet {
+      width: 10rem;
+    }
+  }
+
   .wrapper {
     display: flex;
     justify-content: space-evenly;

@@ -18,6 +18,12 @@
     width: 55%;
   }
 
+  @include m-tablet {
+    height: 25rem;
+    padding: 0 2.5rem;
+    width: 60%;
+  }
+
   .imgWrapper {
     display: flex;
     background-color: $primary-violet;
@@ -55,6 +61,10 @@
     @include l-tablet {
       font-size: 1.8rem;
     }
+
+    @include m-tablet {
+      font-size: 1.6rem;
+    }
   }
 
   .text {
@@ -63,6 +73,10 @@
 
     @include l-tablet {
       font-size: 1.4rem;
+    }
+
+    @include m-tablet {
+      font-size: 1.3rem;
     }
   }
 }

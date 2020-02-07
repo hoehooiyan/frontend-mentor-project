@@ -11,6 +11,10 @@
     font-size: 2.5rem;
     transition: all 0.3s;
 
+    @include m-tablet {
+      font-size: 2rem;
+    }
+
     &:hover {
       color: hsl(180, 66%, 49%);
     }
