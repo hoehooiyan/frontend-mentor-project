@@ -10,7 +10,7 @@ const Button = ({
   padding,
   text,
   width,
-  handleClick
+  handleButtonClick
 }) => {
   const style = {
     backgroundColor: `${backgroundColor}`,
@@ -30,7 +30,7 @@ const Button = ({
       type='submit'
       style={style}
       className={buttonStyles.button}
-      onClick={handleClick}
+      onClick={handleButtonClick}
     >
       {text}
     </button>

@@ -80,4 +80,8 @@
     }
   }
 
+  .resultContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

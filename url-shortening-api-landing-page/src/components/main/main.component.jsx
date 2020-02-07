@@ -11,13 +11,11 @@ const Main = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [longLink, setLongLink] = useState('');
   const [shortenLink, setShortenLink] = useState('');
-  const [links, setLinks] = useState([
-    {
-      longLink,
-      shortenLink,
-      id: ''
-    }
-  ]);
+  // const [links, setLinks] = useState([]);
+  const [links, setLinks] = useState(() => {
+    const persistedData = localStorage.getItem('links');
+    return persistedData ? JSON.parse(persistedData) : [];
+  });
 
   /**
    * Information for fetching data from the api
@@ -37,26 +35,25 @@ const Main = () => {
    * When the page first renders/ re-render if there's some updates
    */
   useEffect(() => {
+    localStorage.setItem('links', JSON.stringify(links));
+
     if (isClicked && longLink !== '') {
       fetch(api, options)
         .then(data => {
           return data.json();
         })
         .then(res => {
-          // if (isClicked && longLink !== '') {
-          // }
           setShortenLink(`${prefix}${res.hashid}`);
-          console.log(res);
+          // console.log(res);
+          // if (shortenLink === ''){
+          // }
+          console.log(shortenLink);
         })
         .catch(error => {
           console.log(error);
         });
     }
-  }, [api, isClicked, longLink, shortenLink, options, prefix]);
-
-  useEffect(() => {
-    localStorage.setItem('links', JSON.stringify(links));
-  });
+  }, [api, isClicked, longLink, shortenLink, options, prefix, links]);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -72,9 +69,10 @@ const Main = () => {
     } else {
       setLongLink(userInput);
       setLinks([
+        ...links,
         {
           longLink: userInput,
-          shortenLink,
+          shortenLink: shortenLink,
           id: uuid()
         }
       ]);
@@ -87,6 +85,7 @@ const Main = () => {
   };
 
   const handleButtonClick = e => {
+    console.log(e.target);
     e.target.innerText = 'Copied!';
     e.target.style.backgroundColor = `${globalStyles.darkViolet}`;
 
@@ -130,14 +129,21 @@ const Main = () => {
           Please add a link (that includes http or https)
         </p>
       </form>
-      {isClicked && longLink ? (
-        <Result
-          originalLink={longLink}
-          shortenLink={shortenLink}
-          handleButtonClick={handleButtonClick}
-          handleLinkClick={handleLinkClick}
-        />
-      ) : null}
+      <div className={mainStyles.resultContainer}>
+        {links
+          ? links.map(link => {
+              return (
+                <Result
+                  key={link.id}
+                  originalLink={link.longLink}
+                  shortenLink={link.shortenLink}
+                  handleButtonClick={handleButtonClick}
+                  handleLinkClick={handleLinkClick}
+                />
+              );
+            })
+          : null}
+      </div>
     </main>
   );
 };

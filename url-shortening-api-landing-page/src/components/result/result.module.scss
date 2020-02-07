@@ -14,14 +14,12 @@
 
   .originalLink {
     color: $dark-violet;
-    font-size: 2rem;
     width: 60%;
     word-wrap: break-word;
   }
 
   .shortenLink {
     color: $primary-cyan;
-    font-size: 2rem;
 
     &:hover {
       color: darken($color: $primary-cyan, $amount: 5%);
