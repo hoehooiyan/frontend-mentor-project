@@ -10,8 +10,7 @@ import Result from '../result/result.component';
 const Main = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [longLink, setLongLink] = useState('');
-  const [shortenLink, setShortenLink] = useState('');
-  // const [links, setLinks] = useState([]);
+  const [shortLink, setShortLink] = useState('');
   const [links, setLinks] = useState(() => {
     const persistedData = localStorage.getItem('links');
     return persistedData ? JSON.parse(persistedData) : [];
@@ -31,29 +30,20 @@ const Main = () => {
     body: JSON.stringify(data)
   };
 
-  /**
-   * When the page first renders/ re-render if there's some updates
-   */
   useEffect(() => {
     localStorage.setItem('links', JSON.stringify(links));
 
-    if (isClicked && longLink !== '') {
-      fetch(api, options)
-        .then(data => {
-          return data.json();
-        })
-        .then(res => {
-          setShortenLink(`${prefix}${res.hashid}`);
-          // console.log(res);
-          // if (shortenLink === ''){
-          // }
-          console.log(shortenLink);
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
-  }, [api, isClicked, longLink, shortenLink, options, prefix, links]);
+    fetch(api, options)
+      .then(data => {
+        return data.json();
+      })
+      .then(res => {
+        setShortLink(`${prefix}${res.hashid}`);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, [api, isClicked, links, longLink, options, prefix, shortLink]);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -64,17 +54,17 @@ const Main = () => {
      * because the api won't get any results for the links without those keywords
      */
     const userInput = e.target.userInput.value;
-    if (!userInput.includes('https') || !userInput.includes('http')) {
+    if (
+      userInput === '' ||
+      !userInput.includes('https') ||
+      !userInput.includes('http')
+    ) {
       setLongLink('');
     } else {
       setLongLink(userInput);
       setLinks([
         ...links,
-        {
-          longLink: userInput,
-          shortenLink: shortenLink,
-          id: uuid()
-        }
+        { longLink: userInput, shortLink: shortLink, id: uuid() }
       ]);
     }
 
@@ -85,21 +75,24 @@ const Main = () => {
   };
 
   const handleButtonClick = e => {
-    console.log(e.target);
     e.target.innerText = 'Copied!';
     e.target.style.backgroundColor = `${globalStyles.darkViolet}`;
 
     /**
      * Copy the shorten link to the clipboard
      */
-    navigator.clipboard.writeText(shortenLink);
+    navigator.clipboard.writeText(e.target.previousSibling.innerText);
   };
 
   const handleLinkClick = e => {
     /**
      * Copy the shorten link to the clipboard
      */
-    navigator.clipboard.writeText(shortenLink);
+    navigator.clipboard.writeText(e.target.innerText);
+  };
+
+  const handleInputChange = e => {
+    setLongLink(e.target.value);
   };
 
   return (
@@ -112,6 +105,7 @@ const Main = () => {
           className={
             isClicked && !longLink ? mainStyles.noInput : mainStyles.input
           }
+          onChange={handleInputChange}
         />
         <Button
           backgroundColor={globalStyles.primaryCyan}
@@ -130,13 +124,15 @@ const Main = () => {
         </p>
       </form>
       <div className={mainStyles.resultContainer}>
-        {links
+        {(links && shortLink !== null) ||
+        shortLink !== '' ||
+        shortLink !== undefined
           ? links.map(link => {
               return (
                 <Result
                   key={link.id}
                   originalLink={link.longLink}
-                  shortenLink={link.shortenLink}
+                  shortenLink={link.shortLink}
                   handleButtonClick={handleButtonClick}
                   handleLinkClick={handleLinkClick}
                 />

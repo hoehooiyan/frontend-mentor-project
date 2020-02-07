@@ -1,6 +1,7 @@
 @import '../../app/App.styles.scss';
 
 .button {
+  outline: none;
   transition: all 0.3s;
 
   &:hover {
