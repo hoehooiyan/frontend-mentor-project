@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import uuid from 'uuid/v4';
+import copy from 'copy-to-clipboard';
 
 import globalStyles from '../../app/App.styles.scss';
 import mainStyles from './main.module.scss';
@@ -81,14 +82,16 @@ const Main = () => {
     /**
      * Copy the shorten link to the clipboard
      */
-    navigator.clipboard.writeText(e.target.previousSibling.innerText);
+    // navigator.clipboard.writeText(e.target.previousSibling.innerText);
+    copy(e.target.previousSibling.innerText);
   };
 
   const handleLinkClick = e => {
     /**
      * Copy the shorten link to the clipboard
      */
-    navigator.clipboard.writeText(e.target.innerText);
+    // navigator.clipboard.writeText(e.target.innerText);
+    copy(e.target.innerText);
   };
 
   const handleInputChange = e => {
