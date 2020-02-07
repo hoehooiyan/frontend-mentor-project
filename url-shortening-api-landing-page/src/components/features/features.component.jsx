@@ -36,7 +36,7 @@ const Features = () => {
           img={ThirdLogo}
           marginTop='8rem'
           title='Fully Customizable'
-          text={`improve brand awareness and content discoverability through customizable links, supercharging audience engagement.`}
+          text={`Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.`}
         />
       </div>
     </section>
