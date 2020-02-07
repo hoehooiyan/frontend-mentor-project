@@ -23,6 +23,7 @@ const Hero = () => {
           padding='1rem 2rem'
           text='Get Started'
           width='15rem'
+          screenSize='1000px'
         />
       </div>
       <img

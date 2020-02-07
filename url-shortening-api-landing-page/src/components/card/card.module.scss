@@ -8,6 +8,16 @@
   height: 25rem;
   width: 60%;
 
+  @include s-desktop {
+    height: 27rem;
+  }
+
+  @include l-tablet {
+    height: 23rem;
+    padding: 0 3rem;
+    width: 55%;
+  }
+
   .imgWrapper {
     display: flex;
     background-color: $primary-violet;
@@ -18,10 +28,22 @@
     position: relative;
     top: -3rem;
 
+    @include l-tablet {
+      height: 5rem;
+      width: 5rem;
+      top: -2.5rem;
+      margin-bottom: -1rem;
+    }
+
     .img {
       margin: auto;
       height: 3.2rem;
       width: 3.2rem;
+
+      @include l-tablet {
+        height: 2.8rem;
+        width: 2.8rem;
+      }
     }
   }
 
@@ -29,10 +51,18 @@
     color: $dark-violet;
     font-size: 2rem;
     margin-bottom: 1.5rem;
+
+    @include l-tablet {
+      font-size: 1.8rem;
+    }
   }
 
   .text {
     color: $grayish-violet;
     font-size: 1.5rem;
+
+    @include l-tablet {
+      font-size: 1.4rem;
+    }
   }
 }

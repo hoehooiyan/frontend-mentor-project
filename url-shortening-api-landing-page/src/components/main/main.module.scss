@@ -9,6 +9,10 @@
   position: relative;
   z-index: 8888;
 
+  @include l-tablet {
+    padding: 0 calc(#{$global-left-right-p} - 4rem);
+  }
+
   .form {
     background-color: $primary-violet;
     background-image: url('../../images/bg-shorten-desktop.svg');

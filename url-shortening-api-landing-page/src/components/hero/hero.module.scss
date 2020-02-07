@@ -11,6 +11,10 @@
     padding: 0 $global-left-right-p $global-top-bottom-p;
   }
 
+  @include l-tablet {
+    padding: 0 calc(#{$global-left-right-p} - 4rem) $global-top-bottom-p;
+  }
+
   .heroDescription {
     width: 60%;
   }
@@ -47,8 +51,13 @@
       width: 70rem;
     }
 
-    @include m-desktop {
+    @include s-desktop {
       width: 65rem;
+    }
+
+    @include l-tablet {
+      width: 55rem;
+      right: -15rem;
     }
   }
 }

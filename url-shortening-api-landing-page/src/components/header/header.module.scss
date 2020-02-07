@@ -7,6 +7,14 @@
   padding: $global-top-bottom-p $global-left-right-p;
   width: 100%;
 
+  @include s-desktop {
+    margin-bottom: 4rem;
+  }
+
+  @include l-tablet {
+    padding: $global-top-bottom-p calc(#{$global-left-right-p} - 4rem);
+  }
+
   .panel {
     display: flex;
     align-items: flex-start;

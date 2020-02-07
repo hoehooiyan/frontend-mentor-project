@@ -9,9 +9,17 @@
   align-items: flex-start;
   justify-content: space-between;
 
+  @include l-tablet {
+    padding: 6rem calc(#{$global-left-right-p} - 4rem);
+  }
+
   .wrapper {
     display: flex;
     justify-content: space-evenly;
     width: 70%;
+
+    @include l-tablet {
+      width: 80%;
+    }
   }
 }
