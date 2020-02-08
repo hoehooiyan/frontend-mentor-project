@@ -57,8 +57,8 @@ const Main = () => {
     const userInput = e.target.userInput.value;
     if (
       userInput === '' ||
-      !userInput.includes('https') ||
-      !userInput.includes('http')
+      !userInput.includes('https://') ||
+      !userInput.includes('http://')
     ) {
       setLongLink('');
     } else {
