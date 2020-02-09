@@ -7,4 +7,9 @@
   transform: rotate(180deg);
   position: relative;
   z-index: 100;
+
+  @include l-mobile {
+    transform: rotate(90deg);
+    z-index: 98;
+  }
 }

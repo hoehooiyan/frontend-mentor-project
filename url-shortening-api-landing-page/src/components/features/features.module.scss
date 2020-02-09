@@ -31,6 +31,10 @@
     @include m-tablet {
       font-size: 2.5rem;
     }
+
+    @include l-mobile {
+      font-size: 3rem;
+    }
   }
 
   .text {
@@ -48,5 +52,10 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 8rem;
+
+    @include l-mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
