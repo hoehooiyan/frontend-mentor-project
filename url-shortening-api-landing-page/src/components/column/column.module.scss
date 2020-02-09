@@ -4,6 +4,10 @@
   .title {
     color: #ffffff;
     margin-bottom: 2rem;
+
+    @include l-mobile {
+      font-size: 1.8rem;
+    }
   }
 
   .list {
@@ -16,12 +20,14 @@
       font-size: 1.3rem;
     }
 
+    @include l-mobile {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
     li {
       transition: all 0.3s;
-
-      &:not(:last-child) {
-        margin-bottom: 1rem;
-      }
+      margin-bottom: 1rem;
 
       &:hover {
         color: $primary-cyan;

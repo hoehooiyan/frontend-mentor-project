@@ -20,6 +20,10 @@
     margin-bottom: 2rem;
   }
 
+  @include l-mobile {
+    padding: $global-top-bottom-p calc(#{$global-left-right-p} - 8rem);;
+  }
+
   .panel {
     display: flex;
     align-items: flex-start;

@@ -5,6 +5,10 @@
   justify-content: space-between;
   width: 18%;
 
+  @include l-mobile {
+    width: 30%;
+  }
+
   svg {
     color: white;
     cursor: pointer;
@@ -13,6 +17,10 @@
 
     @include m-tablet {
       font-size: 2rem;
+    }
+
+    @include l-mobile {
+      font-size: 2.5rem;
     }
 
     &:hover {

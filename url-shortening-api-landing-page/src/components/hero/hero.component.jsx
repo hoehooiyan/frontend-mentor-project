@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 import HeroImg from '../../images/illustration-working.svg';
 
@@ -8,6 +9,8 @@ import heroStyles from './hero.module.scss';
 import Button from '../button/button.component';
 
 const Hero = () => {
+  const mTabletButton = useMediaQuery(`(max-width: ${globalStyles.mTablet})`);
+
   return (
     <section className={heroStyles.hero}>
       <div className={heroStyles.heroDescription}>
@@ -22,7 +25,7 @@ const Hero = () => {
           color='#ffffff'
           padding='1rem 2rem'
           text='Get Started'
-          width='15rem'
+          width={mTabletButton ? '12rem' : '15rem'}
           screenSize='1000px'
         />
       </div>

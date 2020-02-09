@@ -18,6 +18,10 @@
     calc(#{$global-left-right-p} - 6rem);
   }
 
+  @include l-mobile {
+    padding: 0 calc(#{$global-left-right-p} - 8rem) 30rem calc(#{$global-left-right-p} - 8rem);
+  }
+
   .title {
     color: $dark-violet;
     font-size: 3rem;

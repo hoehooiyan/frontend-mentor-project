@@ -19,6 +19,10 @@
     padding: 0 calc(#{$global-left-right-p} - 6rem) $global-top-bottom-p;
   }
 
+  @include l-mobile {
+    padding: 0 calc(#{$global-left-right-p} - 8rem) $global-top-bottom-p;
+  }
+
   .heroDescription {
     width: 60%;
   }
@@ -39,6 +43,7 @@
 
     @include m-tablet {
       font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
   }
 

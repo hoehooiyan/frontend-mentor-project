@@ -17,6 +17,10 @@
     padding: 0 calc(#{$global-left-right-p} - 6rem);
   }
 
+  @include l-mobile {
+    padding: 0 calc(#{$global-left-right-p} - 8rem);
+  }
+
   .form {
     background-color: $primary-violet;
     background-image: url('../../images/bg-shorten-desktop.svg');
@@ -70,6 +74,10 @@
       padding: 1rem 2rem;
       width: 80%;
 
+      @include m-tablet {
+        width: 75%;
+      }
+
       &::placeholder {
         color: $red;
         opacity: 0.5;
@@ -85,6 +93,12 @@
       left: 8rem;
       top: 10.2rem;
       z-index: 2000;
+
+      @include m-tablet {
+        font-size: 1.3rem;
+        left: 4rem;
+        top: 7.8rem;
+      }
     }
 
     .noError {

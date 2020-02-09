@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import uuid from 'uuid/v4';
 import copy from 'copy-to-clipboard';
 
@@ -55,10 +56,14 @@ const Main = () => {
      * because the api won't get any results for the links without those keywords
      */
     const userInput = e.target.userInput.value;
+    /**
+     * TODO
+     * Need to implement RegExp for better user input verification
+     */
     if (
       userInput === '' ||
-      !userInput.includes('https://') ||
-      !userInput.includes('http://')
+      !userInput.includes('https') ||
+      !userInput.includes('http')
     ) {
       setLongLink('');
     } else {
@@ -98,6 +103,8 @@ const Main = () => {
     setLongLink(e.target.value);
   };
 
+  const mTabletBtn = useMediaQuery(`(max-width: ${globalStyles.mTablet}`);
+
   return (
     <main className={mainStyles.main}>
       <form className={mainStyles.form} onSubmit={handleSubmit}>
@@ -114,9 +121,10 @@ const Main = () => {
           backgroundColor={globalStyles.primaryCyan}
           borderRadius='0.5rem'
           color='#ffffff'
-          padding='1rem 2rem'
+          fontSize={mTabletBtn ? '1.3rem' : null}
+          padding={mTabletBtn ? '1rem 2rem' : '1rem 2rem'}
           text='Shorten It!'
-          width='15%'
+          width={mTabletBtn ? '18%' : '15%'}
         />
         <p
           className={
