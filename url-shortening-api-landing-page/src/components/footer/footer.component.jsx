@@ -9,8 +9,8 @@ import SocialMedia from '../social-media/social-media.component';
 
 const Footer = () => {
   return (
-    <footer className={footerStyles.footer}>
-      <img src={SiteLogo} alt='Site logo' className={footerStyles.img}/>
+    <footer className={footerStyles.footer} id='resources'>
+      <img src={SiteLogo} alt='Site logo' className={footerStyles.img} />
       <div className={footerStyles.wrapper}>
         <Column
           title='Features'

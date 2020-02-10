@@ -21,10 +21,16 @@
 
   @include l-mobile {
     padding: 0 calc(#{$global-left-right-p} - 8rem) $global-top-bottom-p;
+    flex-direction: column;
   }
 
   .heroDescription {
     width: 60%;
+
+    @include l-mobile {
+      text-align: center;
+      width: 80%;
+    }
   }
 
   .heroTitle {
@@ -45,6 +51,11 @@
       font-size: 3rem;
       margin-bottom: 0.5rem;
     }
+
+    @include l-mobile {
+      font-size: 5rem;
+      margin-top: 4rem;
+    }
   }
 
   .heroText {
@@ -57,6 +68,10 @@
 
     @include m-tablet {
       font-size: 1.4rem;
+    }
+
+    @include l-mobile {
+      font-size: 2rem;
     }
   }
 
@@ -80,6 +95,11 @@
     @include m-tablet {
       width: 40rem;
       right: -10rem;
+    }
+
+    @include l-mobile {
+      order: -1;
+      width: 70rem;
     }
   }
 }

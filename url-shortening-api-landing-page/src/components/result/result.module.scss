@@ -16,6 +16,11 @@
     padding: 1rem 3rem;
   }
 
+  @include l-mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .originalLink {
     color: $dark-violet;
     width: 60%;
@@ -29,6 +34,11 @@
     @include m-tablet {
       font-size: 1.3rem;
     }
+
+    @include l-mobile {
+      font-size: 1.5rem;
+      width: 75%;
+    }
   }
 
   .shortenLink {
@@ -40,6 +50,10 @@
 
     @include m-tablet {
       font-size: 1.3rem;
+    }
+
+    @include l-mobile {
+      font-size: 1.5rem;
     }
 
     &:hover {
@@ -61,6 +75,10 @@
 
     @include m-tablet {
       width: 40%;
+    }
+
+    @include l-mobile {
+      width: 100%;
     }
   }
 }

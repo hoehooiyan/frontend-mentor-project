@@ -10,6 +10,7 @@ import Button from '../button/button.component';
 
 const Hero = () => {
   const mTabletButton = useMediaQuery(`(max-width: ${globalStyles.mTablet})`);
+  const lMobileButton = useMediaQuery(`(max-width: ${globalStyles.lMobile})`);
 
   return (
     <section className={heroStyles.hero}>
@@ -25,8 +26,16 @@ const Hero = () => {
           color='#ffffff'
           padding='1rem 2rem'
           text='Get Started'
-          width={mTabletButton ? '12rem' : '15rem'}
-          screenSize='1000px'
+          // width={mTabletButton ? '12rem' : '15rem'}
+          width={() => {
+            if (mTabletButton) {
+              return '12rem';
+            } else if (lMobileButton) {
+              return '30rem';
+            } else {
+              return '15rem';
+            }
+          }}
         />
       </div>
       <img

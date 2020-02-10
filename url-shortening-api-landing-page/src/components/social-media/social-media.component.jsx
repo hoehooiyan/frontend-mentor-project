@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faFacebookSquare,
   faTwitter,
@@ -10,12 +10,12 @@ import {
 
 import socialMediaStyles from './social-media.module.scss';
 
-library.add(
-  faFacebookSquare,
-  faTwitter,
-  faPinterest,
-  faInstagram
-);
+// library.add(
+//   faFacebookSquare,
+//   faTwitter,
+//   faPinterest,
+//   faInstagram
+// );
 
 const SocialMedia = () => {
   return (
@@ -25,7 +25,7 @@ const SocialMedia = () => {
       <FontAwesomeIcon icon={faPinterest} />
       <FontAwesomeIcon icon={faInstagram} />
     </div>
-  )
-}
+  );
+};
 
 export default SocialMedia;

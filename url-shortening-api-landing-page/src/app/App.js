@@ -1,6 +1,8 @@
 import React from 'react';
 
 import './App.styles.scss';
+import './globalVariables';
+import './globalStyles';
 
 import Header from '../components/header/header.component';
 import Hero from '../components/hero/hero.component';

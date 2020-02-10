@@ -20,7 +20,7 @@ const Features = () => {
   const isAfterDetailed = true;
 
   return (
-    <section className={featuresStyles.features}>
+    <section className={featuresStyles.features} id='features'>
       <h2 className={featuresStyles.title}>Advanced Statistics</h2>
       <p className={featuresStyles.text}>
         Track how your links are performing across the web with our advanced

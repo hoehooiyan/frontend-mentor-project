@@ -82,7 +82,7 @@ const Main = () => {
 
   const handleButtonClick = e => {
     e.target.innerText = 'Copied!';
-    e.target.style.backgroundColor = `${globalStyles.darkViolet}`;
+    e.target.style.backgroundColor = `${globalStyles.primaryViolet}`;
 
     /**
      * Copy the shorten link to the clipboard
