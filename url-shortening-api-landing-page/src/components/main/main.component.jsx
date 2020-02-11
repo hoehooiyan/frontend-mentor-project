@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { useMediaQuery } from '../../hooks/useMediaQuery';
 import uuid from 'uuid/v4';
 import copy from 'copy-to-clipboard';
 
-import globalStyles from '../../app/App.styles.scss';
-import mainStyles from './main.module.scss';
-
-import Button from '../button/button.component';
 import Result from '../result/result.component';
+
+import {
+  MainWrapper,
+  FormWrapper,
+  FormInput,
+  ErrorInfo,
+  SubmitButton,
+  ResultWrapper
+} from './main.styles';
+
+/* -------------------------------------------------------------------------- */
+/*                               Main component                               */
+/* -------------------------------------------------------------------------- */
 
 const Main = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -82,7 +90,7 @@ const Main = () => {
 
   const handleButtonClick = e => {
     e.target.innerText = 'Copied!';
-    e.target.style.backgroundColor = `${globalStyles.primaryViolet}`;
+    // e.target.style.backgroundColor = `${globalStyles.primaryViolet}`; //TODO
 
     /**
      * Copy the shorten link to the clipboard
@@ -103,38 +111,31 @@ const Main = () => {
     setLongLink(e.target.value);
   };
 
-  const mTabletBtn = useMediaQuery(`(max-width: ${globalStyles.mTablet}`);
-
   return (
-    <main className={mainStyles.main}>
-      <form className={mainStyles.form} onSubmit={handleSubmit}>
-        <input
-          name='userInput'
-          type='text'
-          placeholder='Shorten a link here...'
-          className={
-            isClicked && !longLink ? mainStyles.noInput : mainStyles.input
-          }
-          onChange={handleInputChange}
-        />
-        <Button
-          backgroundColor={globalStyles.primaryCyan}
-          borderRadius='0.5rem'
-          color='#ffffff'
-          fontSize={mTabletBtn ? '1.3rem' : null}
-          padding={mTabletBtn ? '1rem 2rem' : '1rem 2rem'}
-          text='Shorten It!'
-          width={mTabletBtn ? '18%' : '15%'}
-        />
-        <p
-          className={
-            isClicked && !longLink ? mainStyles.error : mainStyles.noError
-          }
-        >
-          Please add a link (that includes http or https)
-        </p>
-      </form>
-      <div className={mainStyles.resultContainer}>
+    <MainWrapper>
+      <FormWrapper onSubmit={handleSubmit}>
+        {isClicked && !longLink ? (
+          <FormInput
+            noInput
+            name='userInput'
+            type='text'
+            placeholder='Shorten a link here...'
+            onChange={handleInputChange}
+          />
+        ) : (
+          <FormInput
+            name='userInput'
+            type='text'
+            placeholder='Shorten a link here...'
+            onChange={handleInputChange}
+          />
+        )}
+        <SubmitButton>Shorten It!</SubmitButton>
+        {isClicked && !longLink ? (
+          <ErrorInfo>Please add a link (that includes http or https)</ErrorInfo>
+        ) : null}
+      </FormWrapper>
+      <ResultWrapper>
         {(links && shortLink !== null) ||
         shortLink !== '' ||
         shortLink !== undefined
@@ -150,8 +151,8 @@ const Main = () => {
               );
             })
           : null}
-      </div>
-    </main>
+      </ResultWrapper>
+    </MainWrapper>
   );
 };
 

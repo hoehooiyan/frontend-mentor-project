@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { globalButtonStyles } from '../../app/globalStyles';
 
 import {
   colors,
@@ -8,6 +9,7 @@ import {
 } from '../../app/globalVariables';
 
 import { respondTo } from '../../app/mixins';
+import Header from './header.component';
 
 /* -------------------------------------------------------------------------- */
 /*                      Beginning of styled - components                      */
@@ -15,12 +17,8 @@ import { respondTo } from '../../app/mixins';
 
 /* ------------------------ Global styles for buttons ----------------------- */
 
-const ButtonStyles = css`
-  border: none;
+const HeaderButtonStyles = css`
   border-radius: 50rem;
-  font-family: ${globalFontFamily};
-  font-weight: 900;
-  outline: none;
   padding: 1rem 2rem;
   width: 10rem;
 `;
@@ -96,7 +94,8 @@ export const Navbar = styled.nav`
 /* ------------------------------ Login Button ------------------------------ */
 
 export const LoginButton = styled.button`
-  ${ButtonStyles}
+  ${globalButtonStyles}
+  ${HeaderButtonStyles}
   background-color: transparent;
   color: ${colors.grayishViolet};
 `;
@@ -104,7 +103,8 @@ export const LoginButton = styled.button`
 /* ----------------------------- Sign Up Button ----------------------------- */
 
 export const SignUpButton = styled.button`
-  ${ButtonStyles}
+  ${globalButtonStyles}
+  ${HeaderButtonStyles}
   background-color: ${colors.primaryCyan};
   color: ${colors.white};
 `;
