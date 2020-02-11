@@ -9,8 +9,7 @@ const Connector = ({ marginTop, width }) => {
       style={{
         marginTop: `${marginTop}`,
         width: `${width}`
-      }}
-    ></div>
+      }}></div>
   );
 };
 

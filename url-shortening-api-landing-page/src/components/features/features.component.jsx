@@ -1,59 +1,55 @@
 import React from 'react';
-import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 import FirstLogo from '../../images/icon-brand-recognition.svg';
 import SecondLogo from '../../images/icon-detailed-records.svg';
 import ThirdLogo from '../../images/icon-fully-customizable.svg';
 
-import globalStyles from '../../app/App.styles.scss';
-import featuresStyles from './features.module.scss';
+import {
+  FeaturesWrapper,
+  FeaturesTitle,
+  FeaturesText,
+  CardsWrapper,
+  AfterBrandConnector,
+  AfterDetailedConnector
+} from './features.styles';
 
 import Card from '../card/card.component';
-import Connector from '../connector/connector.component';
+
+/* -------------------------------------------------------------------------- */
+/*                             Features component                             */
+/* -------------------------------------------------------------------------- */
 
 const Features = () => {
-  const lMobileconnector = useMediaQuery(
-    `(max-width: ${globalStyles.lMobile})`
-  );
-
-  const isAfterBrand = true;
-  const isAfterDetailed = true;
-
   return (
-    <section className={featuresStyles.features} id='features'>
-      <h2 className={featuresStyles.title}>Advanced Statistics</h2>
-      <p className={featuresStyles.text}>
+    <FeaturesWrapper id='features'>
+      <FeaturesTitle>Advanced Statistics</FeaturesTitle>
+      <FeaturesText>
         Track how your links are performing across the web with our advanced
         statistics dashboard.
-      </p>
-      <div className={featuresStyles.cards}>
+      </FeaturesText>
+      <CardsWrapper>
         <Card
           img={FirstLogo}
           marginTop='0'
           title='Brand Recognition'
           text={`Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content.`}
         />
-        <Connector
-          marginTop={isAfterBrand && lMobileconnector ? '2.5rem' : null}
-        />
+        <AfterBrandConnector />
         <Card
           img={SecondLogo}
           marginTop='4rem'
           title='Detailed Records'
           text={`Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.`}
         />
-        <Connector
-          marginTop={isAfterDetailed && lMobileconnector ? '-1rem' : null}
-          width={isAfterDetailed && lMobileconnector ? '15rem' : null}
-        />
+        <AfterDetailedConnector />
         <Card
           img={ThirdLogo}
           marginTop='8rem'
           title='Fully Customizable'
           text={`Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.`}
         />
-      </div>
-    </section>
+      </CardsWrapper>
+    </FeaturesWrapper>
   );
 };
 
