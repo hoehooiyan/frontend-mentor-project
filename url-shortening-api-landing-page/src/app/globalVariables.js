@@ -8,7 +8,8 @@ export const colors = {
   darkBlue: 'hsl(255, 11%, 22%)',
   darkViolet: 'hsl(260, 8%, 14%)',
   lightGray: '#eff1f7',
-  white: '#ffffff'
+  white: '#ffffff',
+  darkenPrimaryCyan: '#26BABA',
 };
 
 // Global padding
