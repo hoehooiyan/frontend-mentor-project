@@ -5,16 +5,20 @@ import React from 'react';
 import SiteLogo from '../../images/logo.svg';
 
 import {
-  Header,
+  HeaderWrapper,
   Panel,
   Navbar,
   LoginButton,
   SignUpButton
 } from './header.styles';
 
-const HeaderWrapper = () => {
+/* -------------------------------------------------------------------------- */
+/*                              Header component                              */
+/* -------------------------------------------------------------------------- */
+
+const Header = () => {
   return (
-    <Header>
+    <HeaderWrapper>
       <Panel>
         <img src={SiteLogo} alt='site-logo' />
         <Navbar>
@@ -27,8 +31,8 @@ const HeaderWrapper = () => {
         <LoginButton>Login</LoginButton>
         <SignUpButton>Sign Up</SignUpButton>
       </div>
-    </Header>
+    </HeaderWrapper>
   );
 };
 
-export default HeaderWrapper;
+export default Header;

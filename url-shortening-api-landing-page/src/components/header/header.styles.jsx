@@ -9,6 +9,12 @@ import {
 
 import { respondTo } from '../../app/mixins';
 
+/* -------------------------------------------------------------------------- */
+/*                      Beginning of styled - components                      */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------ Global styles for buttons ----------------------- */
+
 const ButtonStyles = css`
   border: none;
   border-radius: 50rem;
@@ -19,10 +25,9 @@ const ButtonStyles = css`
   width: 10rem;
 `;
 
-/**
- * Header container
- */
-export const Header = styled.header`
+/* ---------------------------- Header wrapper ---------------------------- */
+
+export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   margin-bottom: 8rem;
@@ -47,9 +52,8 @@ export const Header = styled.header`
   `}
 `;
 
-/**
- * Header panel
- */
+/* ------------------------------ Header panel ------------------------------ */
+
 export const Panel = styled.div`
   display: flex;
   align-items: flex-start;
@@ -69,9 +73,8 @@ export const Panel = styled.div`
   }
 `;
 
-/**
- * Header navigation bar
- */
+/* -------------------------- Header navigation bar ------------------------- */
+
 export const Navbar = styled.nav`
   a {
     color: ${colors.grayishViolet};
@@ -90,11 +93,15 @@ export const Navbar = styled.nav`
   }
 `;
 
+/* ------------------------------ Login Button ------------------------------ */
+
 export const LoginButton = styled.button`
   ${ButtonStyles}
   background-color: transparent;
   color: ${colors.grayishViolet};
 `;
+
+/* ----------------------------- Sign Up Button ----------------------------- */
 
 export const SignUpButton = styled.button`
   ${ButtonStyles}
