@@ -2,16 +2,21 @@ import styled, { css } from 'styled-components';
 
 import {
   colors,
-  globalFontFamily;
+  globalFontFamily,
   globalTopBottomPadding,
-  globalLeftRightPadding,
+  globalLeftRightPadding
 } from '../../app/globalVariables';
 
 import { respondTo } from '../../app/mixins';
 
 const ButtonStyles = css`
+  border: none;
   border-radius: 50rem;
   font-family: ${globalFontFamily};
+  font-weight: 900;
+  outline: none;
+  padding: 1rem 2rem;
+  width: 10rem;
 `;
 
 /**
@@ -86,12 +91,13 @@ export const Navbar = styled.nav`
 `;
 
 export const LoginButton = styled.button`
+  ${ButtonStyles}
   background-color: transparent;
-  border: none;
-  border-radius: 50rem;
   color: ${colors.grayishViolet};
-  font-family: ${globalFontFamily};
-  font-weight: 900;
-  padding: 1rem 2rem;
-  width: 8rem;
+`;
+
+export const SignUpButton = styled.button`
+  ${ButtonStyles}
+  background-color: ${colors.primaryCyan};
+  color: ${colors.white};
 `;

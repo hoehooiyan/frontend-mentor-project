@@ -1,48 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import SiteLogo from '../../images/logo.svg';
 
-import globalStyles from '../../app/App.styles.scss';
-import headerStyles from './header.module.scss';
-import { Header, Panel, Navbar } from './header.styles';
+import {
+  Header,
+  Panel,
+  Navbar,
+  LoginButton,
+  SignUpButton
+} from './header.styles';
 
 const HeaderWrapper = () => {
   return (
     <Header>
       <Panel>
-        <img src={SiteLogo} alt='site-logo' className={headerStyles.img} />
+        <img src={SiteLogo} alt='site-logo' />
+        <Navbar>
+          <a href='#features'>Features</a>
+          <a href='#pricing'>Pricing</a>
+          <a href='#resources'>Resources</a>
+        </Navbar>
       </Panel>
-      <Navbar>
-        <a href='#features' className={headerStyles.navItem}>
-          Features
-        </a>
-        <a href='#pricing' className={headerStyles.navItem}>
-          Pricing
-        </a>
-        <a href='#resources' className={headerStyles.navItem}>
-          Resources
-        </a>
-      </Navbar>
-      <div className={headerStyles.cta}>
-        <Button
-          backgroundColor='transparent'
-          borderRadius='50rem'
-          color={globalStyles.grayishViolet}
-          padding='1rem 2rem'
-          text='Login'
-          width='8rem'
-        />
-        <Button
-          backgroundColor={globalStyles.primaryCyan}
-          borderRadius='50rem'
-          color='#ffffff'
-          padding='1rem 2rem'
-          text='Sign Up'
-          width='10rem'
-        />
+      <div>
+        <LoginButton>Login</LoginButton>
+        <SignUpButton>Sign Up</SignUpButton>
       </div>
     </Header>
   );

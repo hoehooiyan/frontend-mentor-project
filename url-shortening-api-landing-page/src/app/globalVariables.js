@@ -7,7 +7,8 @@ export const colors = {
   grayishViolet: 'hsl(257, 7%, 63%)',
   darkBlue: 'hsl(255, 11%, 22%)',
   darkViolet: 'hsl(260, 8%, 14%)',
-  lightGray: '#eff1f7'
+  lightGray: '#eff1f7',
+  white: '#ffffff'
 };
 
 // Global padding
