@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faFacebookSquare,
   faTwitter,
@@ -8,23 +7,16 @@ import {
   faInstagram
 } from '@fortawesome/free-brands-svg-icons';
 
-import socialMediaStyles from './social-media.module.scss';
-
-// library.add(
-//   faFacebookSquare,
-//   faTwitter,
-//   faPinterest,
-//   faInstagram
-// );
+import { SocialMediaWrapper } from './social-media.styles';
 
 const SocialMedia = () => {
   return (
-    <div className={socialMediaStyles.container}>
+    <SocialMediaWrapper>
       <FontAwesomeIcon icon={faFacebookSquare} />
       <FontAwesomeIcon icon={faTwitter} />
       <FontAwesomeIcon icon={faPinterest} />
       <FontAwesomeIcon icon={faInstagram} />
-    </div>
+    </SocialMediaWrapper>
   );
 };
 

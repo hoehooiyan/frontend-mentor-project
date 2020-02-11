@@ -2,16 +2,16 @@ import React from 'react';
 
 import SiteLogo from '../../images/logo-footer.svg';
 
-import footerStyles from './footer.module.scss';
+import { FooterWrapper, FooterLogo, ColumnWrapper } from './footer.styles';
 
 import Column from '../column/column.component';
 import SocialMedia from '../social-media/social-media.component';
 
 const Footer = () => {
   return (
-    <footer className={footerStyles.footer} id='resources'>
-      <img src={SiteLogo} alt='Site logo' className={footerStyles.img} />
-      <div className={footerStyles.wrapper}>
+    <FooterWrapper id='resources'>
+      <FooterLogo src={SiteLogo} alt='Site logo' />
+      <ColumnWrapper>
         <Column
           title='Features'
           itemOne='Link Shortening'
@@ -32,8 +32,8 @@ const Footer = () => {
           itemFour='Contact'
         />
         <SocialMedia />
-      </div>
-    </footer>
+      </ColumnWrapper>
+    </FooterWrapper>
   );
 };
 
