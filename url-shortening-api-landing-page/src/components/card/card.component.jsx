@@ -1,21 +1,22 @@
 import React from 'react';
 
-import cardStyles from './card.module.scss';
+import {
+  CardWrapper,
+  IconWrapper,
+  Icon,
+  CardTitle,
+  CardText
+} from './card.styles';
 
-const Card = ({ img, title, text, marginTop }) => {
+const Card = ({ icon, title, text, marginTop }) => {
   return (
-    <div
-      className={cardStyles.card}
-      style={{
-        marginTop: `${marginTop}`
-      }}
-    >
-      <div className={cardStyles.imgWrapper}>
-        <img src={img} alt='Feature logo' className={cardStyles.img} />
-      </div>
-      <h3 className={cardStyles.title}>{title}</h3>
-      <p className={cardStyles.text}>{text}</p>
-    </div>
+    <CardWrapper marginTop={marginTop}>
+      <IconWrapper>
+        <Icon src={icon} alt='Feature logo' />
+      </IconWrapper>
+      <CardTitle>{title}</CardTitle>
+      <CardText>{text}</CardText>
+    </CardWrapper>
   );
 };
 
