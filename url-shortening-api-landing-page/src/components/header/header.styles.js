@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { globalButtonStyles } from '../../app/globalStyles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
   colors,
@@ -56,6 +57,10 @@ export const Panel = styled.div`
   justify-content: space-between;
   width: 35%;
 
+  ${respondTo.lMobile`
+    width: 35%;
+  `}
+
   img {
     margin-right: 5rem;
 
@@ -68,10 +73,6 @@ export const Panel = styled.div`
     `}
   }
 `;
-
-/* -------------------------- Header navigation bar ------------------------- */
-
-export const Navbar = styled.nav``;
 
 /* ------------------------- Header navigation item ------------------------- */
 
@@ -107,4 +108,40 @@ export const SignUpButton = styled.button`
   ${HeaderButtonStyles}
   background-color: ${colors.primaryCyan};
   color: ${colors.white};
+`;
+
+/* -------------------------------------------------------------------------- */
+/*                           Mobile devices styling                           */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------- Mobile Navigation bar ------------------------- */
+
+export const MobileNavbar = styled.nav`
+  display: flex;
+  flex-direction: column;
+`;
+
+/* Font Awesome burger button */
+export const MobileNavButton = styled(FontAwesomeIcon)`
+  align-self: flex-end;
+  color: ${colors.gray};
+  font-size: 2.5rem;
+`;
+
+/* Dropdown menu content */
+export const MobileNavContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${colors.primaryViolet};
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 50rem;
+`;
+
+/* Dropdown menu item */
+export const MobileNavItem = styled.a`
+  color: ${colors.white};
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
 `;

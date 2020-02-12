@@ -30,4 +30,8 @@ export const globalButtonStyles = css`
   font-family: ${globalFontFamily};
   font-weight: 700;
   outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
