@@ -71,21 +71,23 @@ export const Panel = styled.div`
 
 /* -------------------------- Header navigation bar ------------------------- */
 
-export const Navbar = styled.nav`
-  a {
-    color: ${colors.grayishViolet};
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: color 0.5s;
+export const Navbar = styled.nav``;
 
-    &:hover {
-      color: ${colors.darkViolet};
-    }
+/* ------------------------- Header navigation item ------------------------- */
 
-    &:not(:last-child) {
-      margin-right: 3rem;
-    }
+export const NavItem = styled.a`
+  color: ${colors.grayishViolet};
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover {
+    color: ${colors.darkViolet};
+  }
+
+  &:not(:last-child) {
+    margin-right: 3rem;
   }
 `;
 

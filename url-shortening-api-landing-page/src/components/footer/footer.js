@@ -4,8 +4,8 @@ import SiteLogo from '../../images/logo-footer.svg';
 
 import { FooterWrapper, FooterLogo, ColumnWrapper } from './footer.styles';
 
-import Column from '../column/column.component';
-import SocialMedia from '../social-media/social-media.component';
+import Column from '../column/column';
+import SocialMedia from '../social-media/social-media';
 
 /* -------------------------------------------------------------------------- */
 /*                              Footer component                              */

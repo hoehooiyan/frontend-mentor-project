@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import uuid from 'uuid/v4';
 import copy from 'copy-to-clipboard';
 
-import Result from '../result/result.component';
+import Result from '../result/result';
 
 import {
   MainWrapper,

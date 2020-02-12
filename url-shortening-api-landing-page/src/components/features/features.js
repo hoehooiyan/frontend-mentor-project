@@ -13,7 +13,7 @@ import {
   AfterDetailedConnector
 } from './features.styles';
 
-import Card from '../card/card.component';
+import Card from '../card/card';
 
 /* -------------------------------------------------------------------------- */
 /*                             Features component                             */

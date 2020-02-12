@@ -8,6 +8,7 @@ import {
   HeaderWrapper,
   Panel,
   Navbar,
+  NavItem,
   LoginButton,
   SignUpButton
 } from './header.styles';
@@ -22,9 +23,9 @@ const Header = () => {
       <Panel>
         <img src={SiteLogo} alt='site-logo' />
         <Navbar>
-          <a href='#features'>Features</a>
-          <a href='#pricing'>Pricing</a>
-          <a href='#resources'>Resources</a>
+          <NavItem href='#features'>Features</NavItem>
+          <NavItem href='#pricing'>Pricing</NavItem>
+          <NavItem href='#resources'>Resources</NavItem>
         </Navbar>
       </Panel>
       <div>
