@@ -7,6 +7,8 @@ import {
   globalFontFamily
 } from '../../app/globalVariables';
 
+import { globalButtonStyles } from '../../app/globalStyles';
+
 import { respondTo } from '../../app/mixins';
 
 /* -------------------------------------------------------------------------- */
@@ -130,12 +132,10 @@ export const HeroImage = styled.img`
 /* --------------------------- Get started button --------------------------- */
 
 export const GetStartedButton = styled.button`
+  ${globalButtonStyles}
   background-color: ${colors.primaryCyan};
-  border: none;
   border-radius: 50rem;
   color: ${colors.white};
-  font-family: ${globalFontFamily};
-  font-weight: 900;
   padding: 1rem 2rem;
   width: 15rem;
   z-index: 100;

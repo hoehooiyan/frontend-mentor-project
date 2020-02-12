@@ -2,6 +2,10 @@ import React from 'react';
 
 import { CtaWrapper, CtaTitle, CtaButton } from './cta.styles';
 
+/* -------------------------------------------------------------------------- */
+/*                                Cta component                               */
+/* -------------------------------------------------------------------------- */
+
 const Cta = () => {
   return (
     <CtaWrapper>

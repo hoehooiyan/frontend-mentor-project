@@ -9,7 +9,7 @@ export const colors = {
   darkViolet: 'hsl(260, 8%, 14%)',
   lightGray: '#eff1f7',
   white: '#ffffff',
-  darkenPrimaryCyan: '#26BABA',
+  darkenPrimaryCyan: '#26BABA'
 };
 
 // Global padding
@@ -33,4 +33,4 @@ export const breakpoints = {
 };
 
 // Typograhy
-export const globalFontFamily = 'Poppins';
+export const globalFontFamily = `Poppins, sans-serif`;

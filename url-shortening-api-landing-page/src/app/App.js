@@ -1,8 +1,6 @@
 import React from 'react';
 
-import './App.styles.scss';
-import './globalVariables';
-import './globalStyles';
+import { GlobalStyles } from './globalStyles';
 
 import Header from '../components/header/header.component';
 import Hero from '../components/hero/hero.component';
@@ -13,7 +11,8 @@ import Footer from '../components/footer/footer.component';
 
 const App = () => {
   return (
-    <div className='App'>
+    <div>
+      <GlobalStyles />
       <Header />
       <Hero />
       <Main />

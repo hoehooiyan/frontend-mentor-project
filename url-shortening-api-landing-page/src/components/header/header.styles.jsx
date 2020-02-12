@@ -3,13 +3,11 @@ import { globalButtonStyles } from '../../app/globalStyles';
 
 import {
   colors,
-  globalFontFamily,
   globalTopBottomPadding,
   globalLeftRightPadding
 } from '../../app/globalVariables';
 
 import { respondTo } from '../../app/mixins';
-import Header from './header.component';
 
 /* -------------------------------------------------------------------------- */
 /*                      Beginning of styled - components                      */

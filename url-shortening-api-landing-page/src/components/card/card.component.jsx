@@ -8,6 +8,10 @@ import {
   CardText
 } from './card.styles';
 
+/* -------------------------------------------------------------------------- */
+/*                               Card component                               */
+/* -------------------------------------------------------------------------- */
+
 const Card = ({ icon, title, text, marginTop }) => {
   return (
     <CardWrapper marginTop={marginTop}>

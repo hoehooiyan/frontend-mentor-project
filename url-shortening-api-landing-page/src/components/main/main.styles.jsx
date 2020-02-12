@@ -6,9 +6,8 @@ import {
   globalLeftRightPadding
 } from '../../app/globalVariables';
 
-import { globalButtonStyles } from '../../app/globalStyles';
-
 import ShortenUrlBackgroundDesktop from '../../images/bg-shorten-desktop.svg';
+import { globalButtonStyles } from '../../app/globalStyles';
 
 import { respondTo } from '../../app/mixins';
 
@@ -81,7 +80,7 @@ export const FormInput = styled.input`
   padding: 1rem 2rem;
   width: 80%;
 
-  ::placeholder {
+  &::placeholder {
     color: ${props => (props.noInput ? `${colors.red}` : `${colors.gray}`)};
     opacity: ${props => (props.noInput ? `0.5` : null)};
   }

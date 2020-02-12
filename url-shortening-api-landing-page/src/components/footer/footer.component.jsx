@@ -7,6 +7,10 @@ import { FooterWrapper, FooterLogo, ColumnWrapper } from './footer.styles';
 import Column from '../column/column.component';
 import SocialMedia from '../social-media/social-media.component';
 
+/* -------------------------------------------------------------------------- */
+/*                              Footer component                              */
+/* -------------------------------------------------------------------------- */
+
 const Footer = () => {
   return (
     <FooterWrapper id='resources'>

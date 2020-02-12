@@ -9,6 +9,10 @@ import {
 
 import { SocialMediaWrapper } from './social-media.styles';
 
+/* -------------------------------------------------------------------------- */
+/*                           Social media component                           */
+/* -------------------------------------------------------------------------- */
+
 const SocialMedia = () => {
   return (
     <SocialMediaWrapper>

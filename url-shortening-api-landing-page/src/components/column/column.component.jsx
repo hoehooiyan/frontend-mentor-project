@@ -7,6 +7,10 @@ import {
   ColumnListItem
 } from './column.styles';
 
+/* -------------------------------------------------------------------------- */
+/*                              Column component                              */
+/* -------------------------------------------------------------------------- */
+
 const Column = ({ title, itemOne, itemTwo, itemThree, itemFour }) => {
   return (
     <ColumnWrapper>
