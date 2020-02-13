@@ -41,6 +41,10 @@ export const CardWrapper = styled.div`
     position: relative;
     z-index: 99;
   `}
+
+  ${respondTo.mMobile`
+    width: 100%;
+  `}
 `;
 
 /* ------------------------------ Icon wrapper ----------------------------- */

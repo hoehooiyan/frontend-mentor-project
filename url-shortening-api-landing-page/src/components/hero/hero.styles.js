@@ -39,6 +39,10 @@ export const HeroWrapper = styled.section`
     padding: 0 calc(${globalLeftRightPadding} - 8rem) ${globalTopBottomPadding};
     flex-direction: column;
   `}
+
+  ${respondTo.sMobile`
+    padding: 0;
+  `}
 `;
 
 /* --------------------------- Hero description --------------------------- */
@@ -77,6 +81,10 @@ export const HeroTitle = styled.h1`
     font-size: 5rem;
     margin-top: 4rem;
   `}
+
+  ${respondTo.mMobile`
+    font-size: 4rem;
+  `}
 `;
 
 /* -------------------------------- Hero text ------------------------------- */
@@ -95,6 +103,10 @@ export const HeroText = styled.p`
 
   ${respondTo.lMobile`
     font-size: 2rem;
+  `}
+
+  ${respondTo.mMobile`
+    font-size: 1.6rem;
   `}
 `;
 
@@ -126,6 +138,14 @@ export const HeroImage = styled.img`
     order: -1;
     width: 70rem;
   `}
+
+  ${respondTo.mMobile`
+    width: 55rem;
+  `}
+
+  ${respondTo.sMobile`
+    width: 53rem;
+  `}
 `;
 
 /* --------------------------- Get started button --------------------------- */
@@ -145,5 +165,10 @@ export const GetStartedButton = styled.button`
 
   ${respondTo.lMobile`
     width: 30rem;
+  `}
+
+  ${respondTo.mMobile`
+    font-size: 1.8rem;
+    width: 18rem;
   `}
 `;

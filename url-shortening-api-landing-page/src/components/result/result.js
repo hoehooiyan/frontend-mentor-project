@@ -1,13 +1,15 @@
 import React from 'react';
-// import { useMediaQuery } from '../../hooks/useMediaQuery';
-// import { breakpoints } from '../../app/globalVariables';
+import { truncate } from '../../app/truncate';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { breakpoints } from '../../app/globalVariables';
 
 import {
   ResultWrapper,
   OriginalLink,
   ShortenLink,
   NewLinkWrapper,
-  CopyButton
+  CopyButton,
+  Divider
 } from './result.styles';
 
 /* -------------------------------------------------------------------------- */
@@ -20,11 +22,12 @@ const Result = ({
   handleButtonClick,
   handleLinkClick
 }) => {
-  // const mobileBreakpoint = useMediaQuery(`(max-width: ${breakpoints.lMobile})`);
+  const mobileBreakpoint = useMediaQuery(`(max-width: ${breakpoints.mMobile})`);
 
   return (
     <ResultWrapper>
-      <OriginalLink>{originalLink}</OriginalLink>
+      <OriginalLink>{truncate(originalLink)}</OriginalLink>
+      {mobileBreakpoint ? <Divider /> : null}
       <NewLinkWrapper>
         <ShortenLink onClick={handleLinkClick}>{shortenLink}</ShortenLink>
         <CopyButton onClick={handleButtonClick}>Copy</CopyButton>

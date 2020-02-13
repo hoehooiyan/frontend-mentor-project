@@ -47,6 +47,11 @@ export const HeaderWrapper = styled.header`
   ${respondTo.lMobile`
     padding: ${globalTopBottomPadding} calc(${globalLeftRightPadding} - 8rem);
   `}
+
+  ${respondTo.mMobile`
+    margin-bottom: 0;
+    padding: ${globalTopBottomPadding} calc(${globalLeftRightPadding} - 8rem) calc(${globalTopBottomPadding} - 2rem);
+  `}
 `;
 
 /* ------------------------------ Header panel ------------------------------ */
@@ -119,6 +124,10 @@ export const SignUpButton = styled.button`
     margin: 0 auto;
     width: 20rem;
   `}
+
+  ${respondTo.mMobile`
+    width: 25rem;
+  `}
 `;
 
 /* -------------------------------------------------------------------------- */
@@ -147,12 +156,16 @@ export const MobileNavContent = styled.div`
   flex-direction: column;
   background-color: ${colors.primaryViolet};
   border-radius: 0.5rem;
-  min-width: 56rem;
+  width: 56rem;
   padding: 3rem 0;
   text-align: center;
   position: absolute;
   right: 2rem;
   z-index: 10;
+
+  ${respondTo.mMobile`
+    width: 37.4rem;
+  `}
 `;
 
 /* Dropdown menu item */
@@ -171,4 +184,8 @@ export const Divider = styled.hr`
   border: 0.4px solid ${colors.lightGray};
   margin: 0 auto 2rem auto;
   width: 50rem;
+
+  ${respondTo.mMobile`
+    width: 32rem;
+  `}
 `;

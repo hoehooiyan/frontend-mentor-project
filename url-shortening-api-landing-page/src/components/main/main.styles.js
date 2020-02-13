@@ -7,6 +7,7 @@ import {
 } from '../../app/globalVariables';
 
 import ShortenUrlBackgroundDesktop from '../../images/bg-shorten-desktop.svg';
+import ShortenUrlBackgroundMobile from '../../images/bg-shorten-mobile.svg';
 import { globalButtonStyles } from '../../app/globalStyles';
 
 import { respondTo } from '../../app/mixins';
@@ -65,6 +66,17 @@ export const FormWrapper = styled.form`
     top: -5rem;
     margin-bottom: 2rem;
   `}
+
+  ${respondTo.lMobile`
+    background-image: url(${ShortenUrlBackgroundMobile});
+    background-position: right;
+  `}
+
+  ${respondTo.mMobile`
+    flex-direction: column;
+    height: 15rem;
+    padding: 0 2.5rem;
+  `}
 `;
 
 /* ------------------------------- Form input ------------------------------- */
@@ -76,6 +88,7 @@ export const FormInput = styled.input`
     props.noInput ? `${colors.red}` : `${colors.primaryViolet}`};
   color: ${colors.primaryViolet};
   font-family: ${globalFontFamily};
+  margin-bottom: ${props => (props.noInput ? `1.5rem` : null)};
   outline: none;
   padding: 1rem 2rem;
   width: 80%;
@@ -91,6 +104,10 @@ export const FormInput = styled.input`
 
   ${respondTo.lMobile`
     width: 70%;
+  `}
+
+  ${respondTo.mMobile`
+    width: 100%;
   `}
 `;
 
@@ -110,6 +127,11 @@ export const ErrorInfo = styled.p`
     left: 4rem;
     top: 7.8rem;
   `}
+
+  ${respondTo.mMobile`
+    top: 6.7rem;
+    left: 3rem;
+  `}
 `;
 
 /* ------------------------------ Submit button ----------------------------- */
@@ -127,8 +149,14 @@ export const SubmitButton = styled.button`
   `}
 
   ${respondTo.lMobile`
-    padding 1rem;
+    padding: 1rem;
     width: 22%;
+  `}
+
+  ${respondTo.mMobile`
+    font-size: 1.5rem;
+    padding: 0.7rem;
+    width: 100%;
   `}
 `;
 

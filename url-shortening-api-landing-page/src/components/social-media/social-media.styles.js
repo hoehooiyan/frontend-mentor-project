@@ -16,7 +16,11 @@ export const SocialMediaWrapper = styled.div`
   width: 18%;
 
   ${respondTo.lMobile`
-    width: 30%;
+    width: 40%;
+  `}
+
+  ${respondTo.mMobile`
+    width: 50%;
   `}
 
   svg {

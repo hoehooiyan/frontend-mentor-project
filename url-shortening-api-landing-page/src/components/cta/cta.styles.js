@@ -45,6 +45,10 @@ export const CtaTitle = styled.h2`
   ${respondTo.lMobile`
     font-size: 3rem;
   `}
+
+  ${respondTo.mMobile`
+    font-size: 2.5rem;
+  `}
 `;
 
 /* ------------------------------- CTA button ------------------------------- */

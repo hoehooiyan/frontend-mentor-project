@@ -61,6 +61,13 @@ export const FeaturesTitle = styled.h2`
 
   ${respondTo.lMobile`
     font-size: 3rem;
+    width: 40rem;
+  `}
+
+  ${respondTo.mMobile`
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    width: 30rem;
   `}
 `;
 
@@ -74,6 +81,14 @@ export const FeaturesText = styled.p`
   ${respondTo.mTablet`
     font-size: 1.6rem;
     width: 45rem;
+  `}
+
+  ${respondTo.lMobile`
+    width: 35rem;
+  `}
+
+  ${respondTo.mMobile`
+    width: 30rem;
   `}
 `;
 

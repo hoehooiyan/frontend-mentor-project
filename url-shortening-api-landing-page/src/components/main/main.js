@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import uuid from 'uuid/v4';
 import copy from 'copy-to-clipboard';
 
+import { colors } from '../../app/globalVariables';
 import Result from '../result/result';
 
 import {
@@ -26,9 +27,7 @@ const Main = () => {
     return persistedData ? JSON.parse(persistedData) : [];
   });
 
-  /**
-   * Information for fetching data from the api
-   */
+  /* --------------- Information for fetching data from the api --------------- */
   const api = `https://rel.ink/api/links/`;
   const prefix = `https://rel.ink/`;
   const data = { url: longLink };
@@ -82,15 +81,13 @@ const Main = () => {
       ]);
     }
 
-    /**
-     * Clear the input value once the form is submitted
-     */
+    /* ------------ Clear the input value once the form is submitted ------------ */
     e.target.userInput.value = '';
   };
 
   const handleButtonClick = e => {
     e.target.innerText = 'Copied!';
-    // e.target.style.backgroundColor = `${globalStyles.primaryViolet}`; //TODO
+    e.target.style.backgroundColor = `${colors.primaryViolet}`;
 
     /**
      * Copy the shorten link to the clipboard
@@ -132,7 +129,7 @@ const Main = () => {
         )}
         <SubmitButton>Shorten It!</SubmitButton>
         {isClicked && !longLink ? (
-          <ErrorInfo>Please add a link (that includes http or https)</ErrorInfo>
+          <ErrorInfo>Please add a link</ErrorInfo>
         ) : null}
       </FormWrapper>
       <ResultWrapper>
