@@ -88,6 +88,10 @@ export const FormInput = styled.input`
   ${respondTo.mTablet`
     width: ${props => (props.noInput ? `75%` : `70%`)};
   `}
+
+  ${respondTo.lMobile`
+    width: 70%;
+  `}
 `;
 
 /* --------------------- Error shown based on user input -------------------- */
@@ -120,6 +124,11 @@ export const SubmitButton = styled.button`
   ${respondTo.mTablet`
     font-size: 1.3rem;
     width: 18%;
+  `}
+
+  ${respondTo.lMobile`
+    padding 1rem;
+    width: 22%;
   `}
 `;
 

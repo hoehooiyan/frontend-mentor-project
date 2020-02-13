@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import {
   colors,
   globalTopBottomPadding,
-  globalLeftRightPadding,
-  globalFontFamily
+  globalLeftRightPadding
 } from '../../app/globalVariables';
 
 import { globalButtonStyles } from '../../app/globalStyles';

@@ -1,4 +1,6 @@
 import React from 'react';
+// import { useMediaQuery } from '../../hooks/useMediaQuery';
+// import { breakpoints } from '../../app/globalVariables';
 
 import {
   ResultWrapper,
@@ -18,6 +20,8 @@ const Result = ({
   handleButtonClick,
   handleLinkClick
 }) => {
+  // const mobileBreakpoint = useMediaQuery(`(max-width: ${breakpoints.lMobile})`);
+
   return (
     <ResultWrapper>
       <OriginalLink>{originalLink}</OriginalLink>

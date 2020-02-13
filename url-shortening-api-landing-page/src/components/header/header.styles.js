@@ -99,6 +99,12 @@ export const LoginButton = styled.button`
   ${HeaderButtonStyles}
   background-color: transparent;
   color: ${colors.grayishViolet};
+
+  ${respondTo.lMobile`
+    color: ${colors.white};
+    font-size: 1.5rem;
+    margin: 0 auto 1rem auto;
+  `}
 `;
 
 /* ----------------------------- Sign Up Button ----------------------------- */
@@ -108,6 +114,11 @@ export const SignUpButton = styled.button`
   ${HeaderButtonStyles}
   background-color: ${colors.primaryCyan};
   color: ${colors.white};
+
+  ${respondTo.lMobile`
+    margin: 0 auto;
+    width: 20rem;
+  `}
 `;
 
 /* -------------------------------------------------------------------------- */
@@ -117,15 +128,17 @@ export const SignUpButton = styled.button`
 /* -------------------------- Mobile Navigation bar ------------------------- */
 
 export const MobileNavbar = styled.nav`
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  /* flex-direction: column; */
 `;
 
 /* Font Awesome burger button */
 export const MobileNavButton = styled(FontAwesomeIcon)`
   align-self: flex-end;
   color: ${colors.gray};
-  font-size: 2.5rem;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
 `;
 
 /* Dropdown menu content */
@@ -134,8 +147,12 @@ export const MobileNavContent = styled.div`
   flex-direction: column;
   background-color: ${colors.primaryViolet};
   border-radius: 0.5rem;
+  min-width: 56rem;
+  padding: 3rem 0;
   text-align: center;
-  width: 50rem;
+  position: absolute;
+  right: 2rem;
+  z-index: 10;
 `;
 
 /* Dropdown menu item */
@@ -143,5 +160,15 @@ export const MobileNavItem = styled.a`
   color: ${colors.white};
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 2rem;
+  padding: 0 8rem;
   text-decoration: none;
+`;
+
+/* ------------------------- Navbar content divider ------------------------- */
+
+export const Divider = styled.hr`
+  border: 0.4px solid ${colors.lightGray};
+  margin: 0 auto 2rem auto;
+  width: 50rem;
 `;

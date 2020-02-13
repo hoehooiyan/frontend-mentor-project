@@ -3,8 +3,6 @@ import { css } from 'styled-components';
 import { globalFontFamily, breakpoints } from './globalVariables';
 
 export const GlobalStyles = createGlobalStyle`
-  /*@import url('https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap');*/
-
   *, *::before, *::after {
     margin: 0;
     padding: 0;

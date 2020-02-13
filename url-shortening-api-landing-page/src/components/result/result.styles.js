@@ -107,4 +107,10 @@ export const CopyButton = styled.button`
   border-radius: 0.5rem;
   color: ${colors.white};
   padding: 1rem 2rem;
+
+  /* ${respondTo.lMobile`
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+  `} */
 `;
