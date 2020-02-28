@@ -23,9 +23,13 @@
 ## **Intermediate**
 
 1. [ ] Bookmark landing page
-2. [ ] URL shortening API landing page
+2. [x] [URL shortening API landing page](http://hooiyancodes-shortly.netlify.com/)
+3. [ ] Manage landing page
 
 ## **Advanced**
 
 1. [ ] REST Countries API with color theme switcher
 2. [ ] Rock, Paper, Scissors game
+
+## **Premium**
+1. [ ] myteam multi-page website
