@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fb861bd3-c899-4004-8ed0-79d11cea39ef/deploy-status)](https://app.netlify.com/sites/naughty-goldberg-a67ca2/deploys)
-
 # Frontend Mentor - Four card feature section
 
 ![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)

@@ -34,7 +34,7 @@ export const SocialMediaWrapper = styled.div`
     }
 
     ${respondTo.mTablet`
-      font-sizeL 2rem;
+      font-size: 2rem;
     `}
 
     ${respondTo.lMobile`

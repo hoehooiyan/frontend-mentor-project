@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/65358b07-8b7f-4158-840f-9f75240838fa/deploy-status)](https://app.netlify.com/sites/frontendmentor-huddle-landing-page-curved-sections/deploys)
-
 # Frontend Mentor - Huddle landing page with curved sections
 
 ![Header/intro section for the Huddle landing page with curved sections](./design/desktop-preview.jpg)
